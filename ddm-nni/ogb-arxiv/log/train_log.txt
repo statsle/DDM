@@ -1,0 +1,281 @@
+[32m[03/08 13:53:45 graph]: [0mRank of current process: 0. World size: 1
+[32m[03/08 13:53:49 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[03/08 13:53:49 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[03/08 13:54:09 graph]: [0mRank of current process: 0. World size: 1
+[32m[03/08 13:54:12 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[03/08 13:54:12 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[03/08 13:57:07 graph]: [0mRank of current process: 0. World size: 1
+[32m[03/08 13:57:10 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[03/08 13:57:10 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[03/08 13:58:07 graph]: [0mRank of current process: 0. World size: 1
+[32m[03/08 13:58:11 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[03/08 13:58:11 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[03/08 13:58:11 graph]: [0mRun 0th for seed 11
+[32m[03/08 13:58:11 graph]: [0mTotal trainable params num : 5491974
+[32m[03/08 13:58:17 graph]: [0m----------Start Training----------
+[32m[03/08 13:59:14 graph]: [0mRank of current process: 0. World size: 1
+[32m[03/08 13:59:17 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[03/08 13:59:17 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[03/08 13:59:18 graph]: [0mRun 0th for seed 11
+[32m[03/08 13:59:18 graph]: [0mTotal trainable params num : 5491974
+[32m[03/08 13:59:24 graph]: [0m----------Start Training----------
+[32m[03/08 13:59:25 graph]: [0mstart epoch 0.
+[32m[03/08 14:00:13 graph]: [0mRank of current process: 0. World size: 1
+[32m[03/08 14:00:17 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[03/08 14:00:17 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[03/08 14:00:18 graph]: [0mRun 0th for seed 11
+[32m[03/08 14:00:18 graph]: [0mTotal trainable params num : 5491974
+[32m[03/08 14:00:23 graph]: [0m----------Start Training----------
+[32m[03/08 14:00:24 graph]: [0mstart epoch 0.

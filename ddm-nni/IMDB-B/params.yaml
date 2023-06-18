@@ -1,0 +1,45 @@
+DATA:
+    data_name: IMDB-BINARY
+    deg4feat: True
+
+DATALOADER:
+    NUM_WORKERS: 0
+    BATCH_SIZE: 500
+
+MODEL: 
+    num_hidden: 128
+    num_layers: 2
+    nhead: 2
+    activation: prelu
+    attn_drop: 0.4
+    feat_drop: 0.4
+    norm: layernorm
+    pooler: mean
+    # beta_schedule: sigmoid
+    beta_schedule: sigmoid
+    beta_1: 0.0003539425420564767
+    beta_T: 0.04332511993329242
+    T: 278
+
+SOLVER:
+    optim_type: adamw
+    optim_type_f: adamw
+    alpha: 0.8
+    decay: 40
+    LR: 0.00009091421925639108
+    # LR_f: 0.005
+    weight_decay: 0.0005
+    # weight_decay_f: 0.0005
+    MAX_EPOCH: 100
+    # max_epoch_f: 50
+
+DEVICE: cuda
+seeds:
+    - 11
+eval_T:
+    - 50
+    - 100
+    - 200
+
+eval_ratio: 0.2
+

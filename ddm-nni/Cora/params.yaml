@@ -1,0 +1,41 @@
+DATA:
+    data_name: cora
+
+DATALOADER:
+    NUM_WORKERS: 0
+
+MODEL: 
+    num_hidden: 1024
+    num_layers: 2
+    nhead: 4
+    activation: prelu
+    attn_drop: 0.1
+    feat_drop: 0.3
+    norm: layernorm
+    pooler: mean
+    beta_schedule: sigmoid
+    beta_1: 0.0001
+    beta_T: 0.02
+    T: 1000
+    alpha_l: 3
+
+SOLVER:
+    optim_type: adam
+    optim_type_f: adamw
+    alpha: 1
+    decay: 30
+    LR: 0.0001
+    LR_f: 0.01
+    weight_decay: 0
+    weight_decay_f: 0.0005
+    MAX_EPOCH: 100
+    max_epoch_f: 100
+
+DEVICE: cuda
+seeds:
+    - 0
+eval_T:
+    - 50
+    - 100
+    - 200
+

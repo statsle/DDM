@@ -1,0 +1,23 @@
+[2023-03-12 14:58:40] INFO (numexpr.utils/MainThread) Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+[2023-03-12 14:58:40] INFO (numexpr.utils/MainThread) Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2023-03-12 14:58:41] INFO (nni.tuner.tpe/MainThread) Using random seed 729439816
+[2023-03-12 14:58:41] INFO (nni.runtime.msg_dispatcher_base/MainThread) Dispatcher started
+[2023-03-12 14:58:41] ERROR (nni.runtime.msg_dispatcher_base/Thread-1) math domain error
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni/runtime/msg_dispatcher_base.py", line 108, in command_queue_worker
+    self.process_command(command, data)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni/runtime/msg_dispatcher_base.py", line 154, in process_command
+    command_handlers[command](data)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni/runtime/msg_dispatcher.py", line 90, in handle_initialize
+    self.tuner.update_search_space(data)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni/algorithms/hpo/tpe_tuner.py", line 169, in update_search_space
+    self.space = format_search_space(space)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni/common/hpo_utils/formatting.py", line 99, in format_search_space
+    formatted = _format_search_space(tuple(), search_space)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni/common/hpo_utils/formatting.py", line 177, in _format_search_space
+    formatted.append(_format_parameter(key, spec['_type'], spec['_value']))
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni/common/hpo_utils/formatting.py", line 221, in _format_parameter
+    spec.low = math.log(spec.low)
+ValueError: math domain error
+[2023-03-12 14:59:07] INFO (nni.runtime.msg_dispatcher_base/MainThread) Dispatcher exiting...
+[2023-03-12 14:59:08] INFO (nni.runtime.msg_dispatcher_base/MainThread) Dispatcher terminiated

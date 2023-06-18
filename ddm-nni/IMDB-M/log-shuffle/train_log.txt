@@ -1,0 +1,483 @@
+[32m[05/17 09:17:06 graph]: [0mRank of current process: 0. World size: 1
+[32m[05/17 09:17:10 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[05/17 09:17:10 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[05/17 09:17:11 graph]: [0mRun 0th for seed 11
+[32m[05/17 09:17:11 graph]: [0mTotal trainable params num : 1674063
+[32m[05/17 09:17:15 graph]: [0m----------Start Training----------
+[32m[05/17 09:17:16 graph]: [0mEpoch 0 | train_loss: 0.8114 | lr: 0.000200
+[32m[05/17 09:17:16 graph]: [0mEpoch 1 | train_loss: 0.5357 | lr: 0.000200
+[32m[05/17 09:17:16 graph]: [0mEpoch 2 | train_loss: 0.3946 | lr: 0.000200
+[32m[05/17 09:17:49 graph]: [0m#Test_f1: 0.3907±0.0274
+[32m[05/17 09:17:49 graph]: [0mEpoch 2: get test f1 score:  0.391
+[32m[05/17 09:17:49 graph]: [0mbest_f1 0.391 at epoch 2
+[32m[05/17 09:17:49 graph]: [0mEpoch 3 | train_loss: 0.2980 | lr: 0.000200
+[32m[05/17 09:18:19 graph]: [0mRank of current process: 0. World size: 1
+[32m[05/17 09:18:22 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[05/17 09:18:22 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[05/17 09:18:24 graph]: [0mRun 0th for seed 11
+[32m[05/17 09:18:24 graph]: [0mTotal trainable params num : 1674063
+[32m[05/17 09:18:28 graph]: [0m----------Start Training----------
+[32m[05/17 09:18:28 graph]: [0mEpoch 0 | train_loss: 0.7773 | lr: 0.000200
+[32m[05/17 09:18:29 graph]: [0mEpoch 1 | train_loss: 0.4812 | lr: 0.000200
+[32m[05/17 09:18:29 graph]: [0mEpoch 2 | train_loss: 0.3400 | lr: 0.000200
+[32m[05/17 09:19:02 graph]: [0m#Test_f1: 0.3913±0.0382
+[32m[05/17 09:19:02 graph]: [0mEpoch 2: get test f1 score:  0.391
+[32m[05/17 09:19:02 graph]: [0mbest_f1 0.391 at epoch 2
+[32m[05/17 09:19:02 graph]: [0mEpoch 3 | train_loss: 0.2533 | lr: 0.000200
+[32m[05/17 09:20:56 graph]: [0mRank of current process: 0. World size: 1
+[32m[05/17 09:21:00 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[05/17 09:21:00 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[05/17 09:21:01 graph]: [0mRun 0th for seed 11
+[32m[05/17 09:21:01 graph]: [0mTotal trainable params num : 1674063
+[32m[05/17 09:21:06 graph]: [0m----------Start Training----------
+[32m[05/17 09:21:07 graph]: [0mEpoch 0 | train_loss: 0.7773 | lr: 0.000200
+[32m[05/17 09:21:07 graph]: [0mEpoch 1 | train_loss: 0.4812 | lr: 0.000200
+[32m[05/17 09:21:07 graph]: [0mEpoch 2 | train_loss: 0.3401 | lr: 0.000200
+[32m[05/17 09:21:07 graph]: [0mEpoch 3 | train_loss: 0.2530 | lr: 0.000200
+[32m[05/17 09:21:07 graph]: [0mEpoch 4 | train_loss: 0.1967 | lr: 0.000200
+[32m[05/17 09:21:07 graph]: [0mEpoch 5 | train_loss: 0.1580 | lr: 0.000200
+[32m[05/17 09:21:07 graph]: [0mEpoch 6 | train_loss: 0.1368 | lr: 0.000200
+[32m[05/17 09:21:07 graph]: [0mEpoch 7 | train_loss: 0.1207 | lr: 0.000200
+[32m[05/17 09:21:07 graph]: [0mEpoch 8 | train_loss: 0.1128 | lr: 0.000200
+[32m[05/17 09:21:08 graph]: [0mEpoch 9 | train_loss: 0.1052 | lr: 0.000200
+[32m[05/17 09:21:08 graph]: [0mEpoch 10 | train_loss: 0.0998 | lr: 0.000200
+[32m[05/17 09:21:08 graph]: [0mEpoch 11 | train_loss: 0.0965 | lr: 0.000200
+[32m[05/17 09:22:02 graph]: [0m#Test_f1: 0.4333±0.0382
+[32m[05/17 09:22:02 graph]: [0mEpoch 11: get test f1 score:  0.433
+[32m[05/17 09:22:02 graph]: [0mbest_f1 0.433 at epoch 11
+[32m[05/17 09:22:03 graph]: [0mEpoch 12 | train_loss: 0.0936 | lr: 0.000200
+[32m[05/17 09:23:28 graph]: [0mRank of current process: 0. World size: 1
+[32m[05/17 09:23:31 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[05/17 09:23:31 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[05/17 09:23:33 graph]: [0mRun 0th for seed 11
+[32m[05/17 09:23:33 graph]: [0mTotal trainable params num : 1674063
+[32m[05/17 09:23:38 graph]: [0m----------Start Training----------
+[32m[05/17 09:23:38 graph]: [0mEpoch 0 | train_loss: 0.7773 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 1 | train_loss: 0.4812 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 2 | train_loss: 0.3401 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 3 | train_loss: 0.2530 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 4 | train_loss: 0.1967 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 5 | train_loss: 0.1580 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 6 | train_loss: 0.1368 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 7 | train_loss: 0.1207 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 8 | train_loss: 0.1128 | lr: 0.000200
+[32m[05/17 09:23:39 graph]: [0mEpoch 9 | train_loss: 0.1052 | lr: 0.000200
+[32m[05/17 09:23:40 graph]: [0mEpoch 10 | train_loss: 0.0998 | lr: 0.000200
+[32m[05/17 09:23:40 graph]: [0mEpoch 11 | train_loss: 0.0965 | lr: 0.000200
+[32m[05/17 09:24:21 graph]: [0m#Test_f1: 0.4313±0.0404
+[32m[05/17 09:24:21 graph]: [0mEpoch 11: get test f1 score:  0.431
+[32m[05/17 09:24:21 graph]: [0mbest_f1 0.431 at epoch 11
+[32m[05/17 09:24:22 graph]: [0mEpoch 12 | train_loss: 0.0941 | lr: 0.000200
+[32m[05/17 09:24:56 graph]: [0mRank of current process: 0. World size: 1
+[32m[05/17 09:24:59 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[05/17 09:24:59 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[05/17 09:25:01 graph]: [0mRun 0th for seed 11
+[32m[05/17 09:25:01 graph]: [0mTotal trainable params num : 1674063
+[32m[05/17 09:25:05 graph]: [0m----------Start Training----------
+[32m[05/17 09:25:06 graph]: [0mEpoch 0 | train_loss: 0.7773 | lr: 0.000200
+[32m[05/17 09:25:06 graph]: [0mEpoch 1 | train_loss: 0.4812 | lr: 0.000200
+[32m[05/17 09:25:06 graph]: [0mEpoch 2 | train_loss: 0.3401 | lr: 0.000200
+[32m[05/17 09:25:07 graph]: [0mEpoch 3 | train_loss: 0.2530 | lr: 0.000200
+[32m[05/17 09:25:07 graph]: [0mEpoch 4 | train_loss: 0.1967 | lr: 0.000200
+[32m[05/17 09:25:07 graph]: [0mEpoch 5 | train_loss: 0.1580 | lr: 0.000200
+[32m[05/17 09:25:07 graph]: [0mEpoch 6 | train_loss: 0.1368 | lr: 0.000200
+[32m[05/17 09:25:07 graph]: [0mEpoch 7 | train_loss: 0.1207 | lr: 0.000200
+[32m[05/17 09:25:07 graph]: [0mEpoch 8 | train_loss: 0.1128 | lr: 0.000200
+[32m[05/17 09:25:07 graph]: [0mEpoch 9 | train_loss: 0.1052 | lr: 0.000200
+[32m[05/17 09:25:07 graph]: [0mEpoch 10 | train_loss: 0.0998 | lr: 0.000200
+[32m[05/17 09:25:08 graph]: [0mEpoch 11 | train_loss: 0.0965 | lr: 0.000200
+[32m[05/17 09:25:35 graph]: [0m#Test_f1: 0.6920±0.0302
+[32m[05/17 09:25:35 graph]: [0mEpoch 11: get test f1 score:  0.692
+[32m[05/17 09:25:35 graph]: [0mbest_f1 0.692 at epoch 11
+[32m[05/17 09:25:35 graph]: [0mEpoch 12 | train_loss: 0.0941 | lr: 0.000200
+[32m[05/17 09:28:49 graph]: [0mRank of current process: 0. World size: 1
+[32m[05/17 09:29:00 graph]: [0mRank of current process: 0. World size: 1
+[32m[05/17 09:29:03 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[05/17 09:29:03 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[05/17 09:29:05 graph]: [0mRun 0th for seed 11
+[32m[05/17 09:29:05 graph]: [0mTotal trainable params num : 1674063
+[32m[05/17 09:29:10 graph]: [0m----------Start Training----------
+[32m[05/17 09:29:10 graph]: [0mEpoch 0 | train_loss: 0.7773 | lr: 0.000200
+[32m[05/17 09:29:10 graph]: [0mEpoch 1 | train_loss: 0.4812 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 2 | train_loss: 0.3401 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 3 | train_loss: 0.2530 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 4 | train_loss: 0.1967 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 5 | train_loss: 0.1580 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 6 | train_loss: 0.1368 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 7 | train_loss: 0.1207 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 8 | train_loss: 0.1128 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 9 | train_loss: 0.1052 | lr: 0.000200
+[32m[05/17 09:29:11 graph]: [0mEpoch 10 | train_loss: 0.0998 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 11 | train_loss: 0.0965 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 12 | train_loss: 0.0936 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 13 | train_loss: 0.0912 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 14 | train_loss: 0.0886 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 15 | train_loss: 0.0878 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 16 | train_loss: 0.0871 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 17 | train_loss: 0.0853 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 18 | train_loss: 0.0841 | lr: 0.000200
+[32m[05/17 09:29:12 graph]: [0mEpoch 19 | train_loss: 0.0827 | lr: 0.000200
+[32m[05/17 09:29:13 graph]: [0mEpoch 20 | train_loss: 0.0822 | lr: 0.000200
+[32m[05/17 09:29:13 graph]: [0mEpoch 21 | train_loss: 0.0805 | lr: 0.000200
+[32m[05/17 09:29:47 graph]: [0m#Test_f1: 0.4240±0.0348
+[32m[05/17 09:29:47 graph]: [0mEpoch 21: get test f1 score:  0.424
+[32m[05/17 09:29:47 graph]: [0mbest_f1 0.424 at epoch 21
+[32m[05/17 09:29:47 graph]: [0mEpoch 22 | train_loss: 0.0804 | lr: 0.000200
+[32m[05/17 09:30:21 graph]: [0m#Test_f1: 0.3960±0.0321
+[32m[05/17 09:30:21 graph]: [0mEpoch 22: get test f1 score:  0.396
+[32m[05/17 09:30:21 graph]: [0mbest_f1 0.424 at epoch 21
+[32m[05/17 09:30:21 graph]: [0mEpoch 23 | train_loss: 0.0782 | lr: 0.000200
+[32m[05/17 09:30:55 graph]: [0m#Test_f1: 0.4220±0.0372
+[32m[05/17 09:30:55 graph]: [0mEpoch 23: get test f1 score:  0.422
+[32m[05/17 09:30:55 graph]: [0mbest_f1 0.424 at epoch 21
+[32m[05/17 09:30:55 graph]: [0mEpoch 24 | train_loss: 0.0784 | lr: 0.000200
+[32m[05/17 09:31:51 graph]: [0mRank of current process: 0. World size: 1
+[32m[05/17 09:31:55 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[05/17 09:31:55 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[05/17 09:31:56 graph]: [0mRun 0th for seed 11
+[32m[05/17 09:31:56 graph]: [0mTotal trainable params num : 1674063
+[32m[05/17 09:32:01 graph]: [0m----------Start Training----------
+[32m[05/17 09:32:01 graph]: [0mEpoch 0 | train_loss: 0.7773 | lr: 0.000200
+[32m[05/17 09:32:02 graph]: [0mEpoch 1 | train_loss: 0.4812 | lr: 0.000200
+[32m[05/17 09:32:02 graph]: [0mEpoch 2 | train_loss: 0.3401 | lr: 0.000200
+[32m[05/17 09:32:02 graph]: [0mEpoch 3 | train_loss: 0.2530 | lr: 0.000200
+[32m[05/17 09:32:02 graph]: [0mEpoch 4 | train_loss: 0.1967 | lr: 0.000200
+[32m[05/17 09:32:02 graph]: [0mEpoch 5 | train_loss: 0.1580 | lr: 0.000200
+[32m[05/17 09:32:02 graph]: [0mEpoch 6 | train_loss: 0.1368 | lr: 0.000200
+[32m[05/17 09:32:02 graph]: [0mEpoch 7 | train_loss: 0.1207 | lr: 0.000200
+[32m[05/17 09:32:03 graph]: [0mEpoch 8 | train_loss: 0.1128 | lr: 0.000200
+[32m[05/17 09:32:03 graph]: [0mEpoch 9 | train_loss: 0.1052 | lr: 0.000200
+[32m[05/17 09:32:03 graph]: [0mEpoch 10 | train_loss: 0.0998 | lr: 0.000200
+[32m[05/17 09:32:03 graph]: [0mEpoch 11 | train_loss: 0.0965 | lr: 0.000200
+[32m[05/17 09:32:03 graph]: [0mEpoch 12 | train_loss: 0.0936 | lr: 0.000200
+[32m[05/17 09:32:03 graph]: [0mEpoch 13 | train_loss: 0.0912 | lr: 0.000200
+[32m[05/17 09:32:04 graph]: [0mEpoch 14 | train_loss: 0.0886 | lr: 0.000200
+[32m[05/17 09:32:04 graph]: [0mEpoch 15 | train_loss: 0.0878 | lr: 0.000200
+[32m[05/17 09:32:04 graph]: [0mEpoch 16 | train_loss: 0.0871 | lr: 0.000200
+[32m[05/17 09:32:04 graph]: [0mEpoch 17 | train_loss: 0.0853 | lr: 0.000200
+[32m[05/17 09:32:04 graph]: [0mEpoch 18 | train_loss: 0.0841 | lr: 0.000200
+[32m[05/17 09:32:04 graph]: [0mEpoch 19 | train_loss: 0.0827 | lr: 0.000200
+[32m[05/17 09:32:04 graph]: [0mEpoch 20 | train_loss: 0.0822 | lr: 0.000200
+[32m[05/17 09:32:04 graph]: [0mEpoch 21 | train_loss: 0.0805 | lr: 0.000200
+[32m[05/17 09:32:32 graph]: [0m#Test_f1: 0.4287±0.0262
+[32m[05/17 09:32:32 graph]: [0mEpoch 21: get test f1 score:  0.429
+[32m[05/17 09:32:32 graph]: [0mbest_f1 0.429 at epoch 21
+[32m[05/17 09:32:32 graph]: [0mEpoch 22 | train_loss: 0.0806 | lr: 0.000200
+[32m[05/17 09:32:59 graph]: [0m#Test_f1: 0.4280±0.0310
+[32m[05/17 09:32:59 graph]: [0mEpoch 22: get test f1 score:  0.428
+[32m[05/17 09:32:59 graph]: [0mbest_f1 0.429 at epoch 21
+[32m[05/17 09:32:59 graph]: [0mEpoch 23 | train_loss: 0.0791 | lr: 0.000200
+[32m[05/17 09:33:26 graph]: [0m#Test_f1: 0.4253±0.0385
+[32m[05/17 09:33:26 graph]: [0mEpoch 23: get test f1 score:  0.425
+[32m[05/17 09:33:26 graph]: [0mbest_f1 0.429 at epoch 21
+[32m[05/17 09:33:26 graph]: [0mEpoch 24 | train_loss: 0.0782 | lr: 0.000200
+[32m[05/17 09:33:54 graph]: [0m#Test_f1: 0.4293±0.0456
+[32m[05/17 09:33:54 graph]: [0mEpoch 24: get test f1 score:  0.429
+[32m[05/17 09:33:54 graph]: [0mbest_f1 0.429 at epoch 24
+[32m[05/17 09:33:54 graph]: [0mEpoch 25 | train_loss: 0.0781 | lr: 0.000200
+[32m[05/17 09:34:21 graph]: [0m#Test_f1: 0.4160±0.0477
+[32m[05/17 09:34:21 graph]: [0mEpoch 25: get test f1 score:  0.416
+[32m[05/17 09:34:21 graph]: [0mbest_f1 0.429 at epoch 24
+[32m[05/17 09:34:21 graph]: [0mEpoch 26 | train_loss: 0.0771 | lr: 0.000200
+[32m[05/17 09:34:49 graph]: [0m#Test_f1: 0.4033±0.0280
+[32m[05/17 09:34:49 graph]: [0mEpoch 26: get test f1 score:  0.403
+[32m[05/17 09:34:49 graph]: [0mbest_f1 0.429 at epoch 24
+[32m[05/17 09:34:49 graph]: [0mEpoch 27 | train_loss: 0.0761 | lr: 0.000200
+[32m[05/17 09:35:16 graph]: [0m#Test_f1: 0.4087±0.0365
+[32m[05/17 09:35:16 graph]: [0mEpoch 27: get test f1 score:  0.409
+[32m[05/17 09:35:16 graph]: [0mbest_f1 0.429 at epoch 24
+[32m[05/17 09:35:16 graph]: [0mEpoch 28 | train_loss: 0.0755 | lr: 0.000200

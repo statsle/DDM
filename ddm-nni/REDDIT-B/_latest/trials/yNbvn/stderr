@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "main_graph.py", line 215, in <module>
+    f1 = main(cfg)
+  File "main_graph.py", line 163, in main
+    test_f1 = graph_classification_evaluation(model, cfg.eval_T, pooler, eval_loader,
+  File "/ddm-nni/REDDIT-B/evaluator.py", line 51, in graph_classification_evaluation
+    out = model.embed(batch_g, feat, t)
+  File "/ddm-nni/REDDIT-B/models/DDM.py", line 119, in embed
+    _, hidden = self.net(g, x_t=x_t, time_embed=time_embed)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/ddm-nni/REDDIT-B/models/mlp_gat.py", line 72, in forward
+    h_t = self.down_layers[l](g, h_t)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/nn/pytorch/conv/gatconv.py", line 253, in forward
+    if (graph.in_degrees() == 0).any():
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/heterograph.py", line 3435, in in_degrees
+    deg = self._graph.in_degrees(etid, v_tensor)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/heterograph_index.py", line 669, in in_degrees
+    _CAPI_DGLHeteroInDegrees(self, int(etype), F.to_dgl_nd(v))
+  File "dgl/_ffi/_cython/./function.pxi", line 295, in dgl._ffi._cy3.core.FunctionBase.__call__
+  File "dgl/_ffi/_cython/./function.pxi", line 227, in dgl._ffi._cy3.core.FuncCall
+  File "dgl/_ffi/_cython/./function.pxi", line 217, in dgl._ffi._cy3.core.FuncCall3
+dgl._ffi.base.DGLError: [13:19:54] /opt/dgl/src/runtime/cuda/cuda_device_api.cc:116: Check failed: e == cudaSuccess || e == cudaErrorCudartUnloading: CUDA: out of memory
+Stack trace:
+  [bt] (0) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(dmlc::LogMessageFatal::~LogMessageFatal()+0x4f) [0x7fc7948e403f]
+  [bt] (1) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(dgl::runtime::CUDADeviceAPI::AllocDataSpace(DGLContext, unsigned long, unsigned long, DGLDataType)+0x260) [0x7fc794da79d0]
+  [bt] (2) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(dgl::runtime::NDArray::Empty(std::vector<long, std::allocator<long> >, DGLDataType, DGLContext)+0x177) [0x7fc794c15847]
+  [bt] (3) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(dgl::aten::NewIdArray(long, DGLContext, unsigned char)+0x6d) [0x7fc7948ac30d]
+  [bt] (4) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(dgl::runtime::NDArray dgl::aten::impl::Range<(DGLDeviceType)2, long>(long, long, DGLContext)+0x9a) [0x7fc794dc2c1a]
+  [bt] (5) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(dgl::aten::Range(long, long, unsigned char, DGLContext)+0x1fd) [0x7fc7948ac74d]
+  [bt] (6) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(std::pair<dgl::runtime::NDArray, dgl::runtime::NDArray> dgl::aten::impl::Sort<(DGLDeviceType)2, long>(dgl::runtime::NDArray, int)+0x53) [0x7fc794dd0573]
+  [bt] (7) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(dgl::aten::Sort(dgl::runtime::NDArray, int)+0x21a) [0x7fc7948db1ca]
+  [bt] (8) /root/miniconda3/envs/nni/lib/python3.8/site-packages/dgl/libdgl.so(void dgl::aten::impl::COOSort_<(DGLDeviceType)2, long>(dgl::aten::COOMatrix*, bool)+0x5b) [0x7fc794dd875b]
+
+

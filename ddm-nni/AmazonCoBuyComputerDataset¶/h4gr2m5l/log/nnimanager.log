@@ -1,0 +1,35 @@
+[2023-03-21 22:38:41] INFO (main) Start NNI manager
+[2023-03-21 22:38:41] INFO (NNIDataStore) Datastore initialization done
+[2023-03-21 22:38:41] INFO (RestServer) Starting REST server at port 6006, URL prefix: "/"
+[2023-03-21 22:38:41] INFO (RestServer) REST server started.
+[2023-03-21 22:38:42] INFO (NNIManager) Starting experiment: h4gr2m5l
+[2023-03-21 22:38:42] INFO (NNIManager) Setup training service...
+[2023-03-21 22:38:42] INFO (LocalTrainingService) Construct local machine training service.
+[2023-03-21 22:38:42] INFO (NNIManager) Setup tuner...
+[2023-03-21 22:38:42] INFO (NNIManager) Change NNIManager status from: INITIALIZED to: RUNNING
+[2023-03-21 22:38:42] INFO (NNIManager) Add event listeners
+[2023-03-21 22:38:42] INFO (LocalTrainingService) Run local machine training service.
+[2023-03-21 22:38:42] INFO (NNIManager) NNIManager received command from dispatcher: ID, 
+[2023-03-21 22:38:42] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 0, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.5, "attn_drop": 0.2, "nhead": 4, "num_hidden": 256, "LR": 6.395312191510624e-05, "LR_f": 0.0005351237341086548, "weight_decay_f": 3.335747438894046e-05, "alpha": 0.8, "alpha_l": 3, "decay": 30.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.00031720545069810317, "beta_T": 0.0213048638903725, "T": 916.7727167297558}, "parameter_index": 0}
+[2023-03-21 22:38:47] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 0,
+  hyperParameters: {
+    value: '{"parameter_id": 0, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.5, "attn_drop": 0.2, "nhead": 4, "num_hidden": 256, "LR": 6.395312191510624e-05, "LR_f": 0.0005351237341086548, "weight_decay_f": 3.335747438894046e-05, "alpha": 0.8, "alpha_l": 3, "decay": 30.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.00031720545069810317, "beta_T": 0.0213048638903725, "T": 916.7727167297558}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 22:38:57] INFO (NNIManager) Trial job gBZ4q status changed from WAITING to RUNNING
+[2023-03-21 22:39:51] INFO (ShutdownManager) Initiate shutdown: REST request
+[2023-03-21 22:39:51] INFO (RestServer) Stopping REST server.
+[2023-03-21 22:39:51] INFO (NNIManager) Change NNIManager status from: RUNNING to: STOPPING
+[2023-03-21 22:39:51] INFO (NNIManager) Stopping experiment, cleaning up ...
+[2023-03-21 22:39:55] INFO (NNIManager) cancelTrialJob: gBZ4q
+[2023-03-21 22:39:56] INFO (LocalTrainingService) Stopping local machine training service...
+[2023-03-21 22:39:56] INFO (NNIManager) Change NNIManager status from: STOPPING to: STOPPED
+[2023-03-21 22:39:56] INFO (NNIManager) Experiment stopped.
+[2023-03-21 22:39:56] INFO (NNITensorboardManager) Forced stopping all tensorboard task.
+[2023-03-21 22:39:56] INFO (NNITensorboardManager) All tensorboard task stopped.
+[2023-03-21 22:39:56] INFO (NNITensorboardManager) Tensorboard manager stopped.
+[2023-03-21 22:39:56] INFO (RestServer) REST server stopped.
+[2023-03-21 22:39:56] INFO (ShutdownManager) Shutdown complete.

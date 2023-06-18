@@ -1,0 +1,40 @@
+DATA:
+    data_name: comp
+
+DATALOADER:
+    NUM_WORKERS: 0
+
+MODEL: 
+    num_hidden: 512
+    num_layers: 2
+    nhead: 2
+    activation: prelu
+    attn_drop: 0.1
+    feat_drop: 0.1
+    norm: layernorm
+    pooler: mean
+    beta_schedule: const
+    beta_1: 0.0003185531168122948
+    beta_T: 0.02895219089515978
+    T: 520
+
+SOLVER:
+    optim_type: adam
+    optim_type_f: adamw
+    alpha: 1
+    decay: 40
+    LR: 0.0001
+    LR_f: 0.1
+    weight_decay: 0
+    weight_decay_f: 0.0000043895092766227186
+    MAX_EPOCH: 100
+    max_epoch_f: 500
+
+DEVICE: cuda
+seeds:
+    - 0
+eval_T:
+    - 50
+    - 100
+    - 200
+

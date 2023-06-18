@@ -1,0 +1,46 @@
+[2023-03-05 23:01:21] INFO (main) Start NNI manager
+[2023-03-05 23:01:21] INFO (NNIDataStore) Datastore initialization done
+[2023-03-05 23:01:21] INFO (RestServer) Starting REST server at port 6006, URL prefix: "/"
+[2023-03-05 23:01:21] INFO (RestServer) REST server started.
+[2023-03-05 23:01:22] INFO (NNIManager) Starting experiment: 5w172ph9
+[2023-03-05 23:01:22] INFO (NNIManager) Setup training service...
+[2023-03-05 23:01:22] INFO (LocalTrainingService) Construct local machine training service.
+[2023-03-05 23:01:22] INFO (NNIManager) Setup tuner...
+[2023-03-05 23:01:22] INFO (NNIManager) Change NNIManager status from: INITIALIZED to: RUNNING
+[2023-03-05 23:01:22] INFO (NNIManager) Add event listeners
+[2023-03-05 23:01:22] INFO (LocalTrainingService) Run local machine training service.
+[2023-03-05 23:01:22] INFO (NNIManager) NNIManager received command from dispatcher: ID, 
+[2023-03-05 23:01:22] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 0, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.30000000000000004, "nhead": 2, "LR": 0.0002212288447024859, "alpha": 0.8, "decay": 40.0, "norm": "layernorm", "beta_schedule": "quad", "beta_1": 0.0005128796059832887, "beta_T": 0.05509722080106862, "T": 894.7225954520696}, "parameter_index": 0}
+[2023-03-05 23:01:27] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 0,
+  hyperParameters: {
+    value: '{"parameter_id": 0, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.30000000000000004, "nhead": 2, "LR": 0.0002212288447024859, "alpha": 0.8, "decay": 40.0, "norm": "layernorm", "beta_schedule": "quad", "beta_1": 0.0005128796059832887, "beta_T": 0.05509722080106862, "T": 894.7225954520696}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-05 23:01:37] INFO (NNIManager) Trial job IyyZY status changed from WAITING to RUNNING
+[2023-03-05 23:04:38] INFO (NNIManager) Trial job IyyZY status changed from RUNNING to SUCCEEDED
+[2023-03-05 23:04:38] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 1, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.2, "nhead": 4, "LR": 0.00013185661329177733, "alpha": 1, "decay": 20.0, "norm": "layernorm", "beta_schedule": "const", "beta_1": 0.0009347796817622455, "beta_T": 0.04173198683442428, "T": 815.3852365898983}, "parameter_index": 0}
+[2023-03-05 23:04:43] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 1,
+  hyperParameters: {
+    value: '{"parameter_id": 1, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.2, "nhead": 4, "LR": 0.00013185661329177733, "alpha": 1, "decay": 20.0, "norm": "layernorm", "beta_schedule": "const", "beta_1": 0.0009347796817622455, "beta_T": 0.04173198683442428, "T": 815.3852365898983}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-05 23:04:48] INFO (NNIManager) Trial job YN5rH status changed from WAITING to RUNNING
+[2023-03-05 23:07:10] INFO (ShutdownManager) Initiate shutdown: REST request
+[2023-03-05 23:07:10] INFO (RestServer) Stopping REST server.
+[2023-03-05 23:07:10] INFO (NNIManager) Change NNIManager status from: RUNNING to: STOPPING
+[2023-03-05 23:07:10] INFO (NNIManager) Stopping experiment, cleaning up ...
+[2023-03-05 23:07:12] INFO (RestServer) REST server stopped.
+[2023-03-05 23:07:13] INFO (NNIManager) cancelTrialJob: YN5rH
+[2023-03-05 23:07:14] INFO (LocalTrainingService) Stopping local machine training service...
+[2023-03-05 23:07:14] INFO (NNIManager) Change NNIManager status from: STOPPING to: STOPPED
+[2023-03-05 23:07:14] INFO (NNIManager) Experiment stopped.
+[2023-03-05 23:07:14] INFO (NNITensorboardManager) Forced stopping all tensorboard task.
+[2023-03-05 23:07:14] INFO (NNITensorboardManager) All tensorboard task stopped.
+[2023-03-05 23:07:14] INFO (NNITensorboardManager) Tensorboard manager stopped.
+[2023-03-05 23:07:14] INFO (ShutdownManager) Shutdown complete.

@@ -1,0 +1,46 @@
+[2023-04-05 23:45:40] INFO (main) Start NNI manager
+[2023-04-05 23:45:40] INFO (NNIDataStore) Datastore initialization done
+[2023-04-05 23:45:40] INFO (RestServer) Starting REST server at port 6006, URL prefix: "/"
+[2023-04-05 23:45:40] INFO (RestServer) REST server started.
+[2023-04-05 23:45:41] INFO (NNIManager) Starting experiment: 0ce6vkp8
+[2023-04-05 23:45:41] INFO (NNIManager) Setup training service...
+[2023-04-05 23:45:41] INFO (LocalTrainingService) Construct local machine training service.
+[2023-04-05 23:45:41] INFO (NNIManager) Setup tuner...
+[2023-04-05 23:45:41] INFO (NNIManager) Change NNIManager status from: INITIALIZED to: RUNNING
+[2023-04-05 23:45:41] INFO (NNIManager) Add event listeners
+[2023-04-05 23:45:41] INFO (LocalTrainingService) Run local machine training service.
+[2023-04-05 23:45:41] INFO (NNIManager) NNIManager received command from dispatcher: ID, 
+[2023-04-05 23:45:41] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 0, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.4, "nhead": 8, "num_hidden": 512, "LR": 1.4103024101802108e-05, "alpha": 1, "decay": 10.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 6.029200727969846e-05, "beta_T": 0.08706142735639241, "T": 662.1841722672731}, "parameter_index": 0}
+[2023-04-05 23:45:46] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 0,
+  hyperParameters: {
+    value: '{"parameter_id": 0, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.4, "nhead": 8, "num_hidden": 512, "LR": 1.4103024101802108e-05, "alpha": 1, "decay": 10.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 6.029200727969846e-05, "beta_T": 0.08706142735639241, "T": 662.1841722672731}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-04-05 23:45:56] INFO (NNIManager) Trial job Xxhv5 status changed from WAITING to RUNNING
+[2023-04-05 23:46:21] INFO (NNIManager) Trial job Xxhv5 status changed from RUNNING to FAILED
+[2023-04-05 23:46:21] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 1, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.5, "nhead": 4, "num_hidden": 128, "LR": 3.830266060643572e-05, "alpha": 0.4, "decay": 20.0, "norm": "batchnorm", "beta_schedule": "const", "beta_1": 0.0005908190191316888, "beta_T": 0.01969424240333258, "T": 478.70409575695254}, "parameter_index": 0}
+[2023-04-05 23:46:26] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 1,
+  hyperParameters: {
+    value: '{"parameter_id": 1, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.5, "nhead": 4, "num_hidden": 128, "LR": 3.830266060643572e-05, "alpha": 0.4, "decay": 20.0, "norm": "batchnorm", "beta_schedule": "const", "beta_1": 0.0005908190191316888, "beta_T": 0.01969424240333258, "T": 478.70409575695254}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-04-05 23:46:32] INFO (NNIManager) Trial job sVl8i status changed from WAITING to RUNNING
+[2023-04-05 23:46:54] INFO (ShutdownManager) Initiate shutdown: REST request
+[2023-04-05 23:46:54] INFO (RestServer) Stopping REST server.
+[2023-04-05 23:46:54] INFO (NNIManager) Change NNIManager status from: RUNNING to: STOPPING
+[2023-04-05 23:46:54] INFO (NNIManager) Stopping experiment, cleaning up ...
+[2023-04-05 23:46:54] INFO (RestServer) REST server stopped.
+[2023-04-05 23:46:55] INFO (NNIManager) cancelTrialJob: sVl8i
+[2023-04-05 23:46:56] INFO (LocalTrainingService) Stopping local machine training service...
+[2023-04-05 23:46:56] INFO (NNIManager) Change NNIManager status from: STOPPING to: STOPPED
+[2023-04-05 23:46:56] INFO (NNIManager) Experiment stopped.
+[2023-04-05 23:46:56] INFO (NNITensorboardManager) Forced stopping all tensorboard task.
+[2023-04-05 23:46:56] INFO (NNITensorboardManager) All tensorboard task stopped.
+[2023-04-05 23:46:56] INFO (NNITensorboardManager) Tensorboard manager stopped.
+[2023-04-05 23:46:56] INFO (ShutdownManager) Shutdown complete.

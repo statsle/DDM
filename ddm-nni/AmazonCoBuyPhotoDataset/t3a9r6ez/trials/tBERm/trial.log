@@ -1,0 +1,498 @@
+[2023-03-21 22:09:44] PRINT ---new cfg------
+[2023-03-21 22:09:44] PRINT {'DATA': {'data_name': 'photo'}, 'DATALOADER': {'NUM_WORKERS': 0}, 'MODEL': {'num_hidden': 512, 'num_layers': 2, 'nhead': 2, 'activation': 'prelu', 'attn_drop': 0.4, 'feat_drop': 0.2, 'norm': 'layernorm', 'pooler': 'mean', 'beta_schedule': 'sigmoid', 'beta_1': 0.00027149386088704496, 'beta_T': 0.047113191635521016, 'T': 432}, 'SOLVER': {'optim_type': 'adam', 'optim_type_f': 'adamw', 'alpha': 1, 'decay': 30, 'LR': 0.0003383690895580197, 'LR_f': 0.00030669174215072645, 'weight_decay': 0, 'weight_decay_f': 0.00012748178304606758, 'MAX_EPOCH': 150, 'max_epoch_f': 100}, 'DEVICE': 'cuda', 'seeds': [0], 'eval_T': [50, 100, 200], 'output_dir': '/ddm-nni/AmazonCoBuyPhotoDataset/log', 'checkpoint_dir': '/ddm-nni/AmazonCoBuyPhotoDataset/log/checkpoint'}
+[2023-03-21 22:09:44] PRINT [03/21 22:09:44 graph]: Rank of current process: 0. World size: 1
+[2023-03-21 22:09:48] PRINT [03/21 22:09:48 graph]: Environment info:
+[2023-03-21 22:09:48] PRINT PyTorch version: 1.10.0+cu113
+[2023-03-21 22:09:48] PRINT Is debug build: False
+[2023-03-21 22:09:48] PRINT CUDA used to build PyTorch: 11.3
+[2023-03-21 22:09:48] PRINT ROCM used to build PyTorch: N/A
+[2023-03-21 22:09:48] PRINT 
+[2023-03-21 22:09:48] PRINT OS: Ubuntu 20.04.3 LTS (x86_64)
+[2023-03-21 22:09:48] PRINT GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+[2023-03-21 22:09:48] PRINT Clang version: Could not collect
+[2023-03-21 22:09:48] PRINT CMake version: version 3.16.3
+[2023-03-21 22:09:48] PRINT Libc version: glibc-2.31
+[2023-03-21 22:09:48] PRINT 
+[2023-03-21 22:09:48] PRINT Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+[2023-03-21 22:09:48] PRINT Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+[2023-03-21 22:09:48] PRINT Is CUDA available: True
+[2023-03-21 22:09:48] PRINT CUDA runtime version: 11.3.109
+[2023-03-21 22:09:48] PRINT GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+[2023-03-21 22:09:48] PRINT Nvidia driver version: 495.44
+[2023-03-21 22:09:48] PRINT cuDNN version: Probably one of the following:
+[2023-03-21 22:09:48] PRINT /usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+[2023-03-21 22:09:48] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+[2023-03-21 22:09:48] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+[2023-03-21 22:09:48] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+[2023-03-21 22:09:48] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+[2023-03-21 22:09:48] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+[2023-03-21 22:09:48] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+[2023-03-21 22:09:48] PRINT HIP runtime version: N/A
+[2023-03-21 22:09:48] PRINT MIOpen runtime version: N/A
+[2023-03-21 22:09:48] PRINT 
+[2023-03-21 22:09:48] PRINT Versions of relevant libraries:
+[2023-03-21 22:09:48] PRINT [pip3] numpy==1.23.5
+[2023-03-21 22:09:48] PRINT [pip3] torch==1.10.0+cu113
+[2023-03-21 22:09:48] PRINT [pip3] torchvision==0.11.1+cu113
+[2023-03-21 22:09:48] PRINT [conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 22:09:48] PRINT [conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 22:09:48] PRINT [conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 22:09:48] PRINT [conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 22:09:48] PRINT [conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 22:09:48] PRINT [conda] numpy                     1.21.4                   pypi_0    pypi
+[2023-03-21 22:09:48] PRINT [conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 22:09:48] PRINT [conda] torch                     1.10.0+cu113             pypi_0    pypi
+[2023-03-21 22:09:48] PRINT [conda] torchvision               0.11.1+cu113             pypi_0    pypi
+[2023-03-21 22:09:48] PRINT         Pillow (8.4.0)
+[2023-03-21 22:09:48] PRINT [03/21 22:09:48 graph]: Command line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[2023-03-21 22:09:48] PRINT [03/21 22:09:48 graph]: Run 0th for seed 0
+[2023-03-21 22:09:48] PRINT [03/21 22:09:48 graph]: Total trainable params num : 7768495
+[2023-03-21 22:09:53] PRINT [03/21 22:09:53 graph]: ----------Start Training----------
+[2023-03-21 22:09:53] PRINT [03/21 22:09:53 graph]: start epoch 0.
+[2023-03-21 22:09:53] PRINT [03/21 22:09:53 graph]: # Epoch 0: train_loss: 1.0212 | lr: 0.000338
+[2023-03-21 22:09:53] PRINT [03/21 22:09:53 graph]: start epoch 1.
+[2023-03-21 22:09:53] PRINT [03/21 22:09:53 graph]: # Epoch 1: train_loss: 0.8010 | lr: 0.000338
+[2023-03-21 22:09:53] PRINT [03/21 22:09:53 graph]: start epoch 2.
+[2023-03-21 22:09:53] PRINT [03/21 22:09:53 graph]: # Epoch 2: train_loss: 0.6920 | lr: 0.000338
+[2023-03-21 22:09:53] PRINT [03/21 22:09:53 graph]: start epoch 3.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 3: train_loss: 0.6407 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 4.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 4: train_loss: 0.6123 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 5.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 5: train_loss: 0.5919 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 6.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 6: train_loss: 0.5783 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 7.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 7: train_loss: 0.5684 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 8.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 8: train_loss: 0.5589 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 9.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 9: train_loss: 0.5492 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 10.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 10: train_loss: 0.5401 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 11.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 11: train_loss: 0.5325 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 12.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 12: train_loss: 0.5260 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 13.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 13: train_loss: 0.5201 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 14.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 14: train_loss: 0.5149 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 15.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 15: train_loss: 0.5100 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 16.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 16: train_loss: 0.5056 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 17.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 17: train_loss: 0.5016 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 18.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 18: train_loss: 0.4979 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 19.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 19: train_loss: 0.4944 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 20.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 20: train_loss: 0.4909 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 21.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 21: train_loss: 0.4875 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 22.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 22: train_loss: 0.4843 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 23.
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: # Epoch 23: train_loss: 0.4814 | lr: 0.000338
+[2023-03-21 22:09:54] PRINT [03/21 22:09:54 graph]: start epoch 24.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 24: train_loss: 0.4787 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 25.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 25: train_loss: 0.4765 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 26.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 26: train_loss: 0.4741 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 27.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 27: train_loss: 0.4717 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 28.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 28: train_loss: 0.4703 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 29.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 29: train_loss: 0.4678 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 30.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 30: train_loss: 0.4661 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 31.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 31: train_loss: 0.4640 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 32.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 32: train_loss: 0.4630 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 33.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 33: train_loss: 0.4615 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 34.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 34: train_loss: 0.4604 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 35.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 35: train_loss: 0.4590 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 36.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 36: train_loss: 0.4570 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 37.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 37: train_loss: 0.4557 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 38.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 38: train_loss: 0.4557 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 39.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 39: train_loss: 0.4544 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 40.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 40: train_loss: 0.4528 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 41.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 41: train_loss: 0.4511 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 42.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 42: train_loss: 0.4508 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 43.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 43: train_loss: 0.4502 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 44.
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: # Epoch 44: train_loss: 0.4487 | lr: 0.000338
+[2023-03-21 22:09:55] PRINT [03/21 22:09:55 graph]: start epoch 45.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 45: train_loss: 0.4482 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 46.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 46: train_loss: 0.4489 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 47.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 47: train_loss: 0.4465 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 48.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 48: train_loss: 0.4456 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 49.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 49: train_loss: 0.4450 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 50.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 50: train_loss: 0.4441 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 51.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 51: train_loss: 0.4434 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 52.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 52: train_loss: 0.4424 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 53.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 53: train_loss: 0.4410 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 54.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 54: train_loss: 0.4401 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 55.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 55: train_loss: 0.4398 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 56.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 56: train_loss: 0.4387 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 57.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 57: train_loss: 0.4381 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 58.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 58: train_loss: 0.4372 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 59.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 59: train_loss: 0.4352 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 60.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 60: train_loss: 0.4357 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 61.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 61: train_loss: 0.4340 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 62.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 62: train_loss: 0.4342 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 63.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 63: train_loss: 0.4341 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 64.
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: # Epoch 64: train_loss: 0.4337 | lr: 0.000338
+[2023-03-21 22:09:56] PRINT [03/21 22:09:56 graph]: start epoch 65.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 65: train_loss: 0.4360 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 66.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 66: train_loss: 0.4342 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 67.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 67: train_loss: 0.4314 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 68.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 68: train_loss: 0.4324 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 69.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 69: train_loss: 0.4298 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 70.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 70: train_loss: 0.4296 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 71.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 71: train_loss: 0.4286 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 72.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 72: train_loss: 0.4281 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 73.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 73: train_loss: 0.4264 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 74.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 74: train_loss: 0.4265 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 75.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 75: train_loss: 0.4253 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 76.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 76: train_loss: 0.4249 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 77.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 77: train_loss: 0.4240 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 78.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 78: train_loss: 0.4231 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 79.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 79: train_loss: 0.4228 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 80.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 80: train_loss: 0.4218 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 81.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 81: train_loss: 0.4216 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 82.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 82: train_loss: 0.4208 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 83.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 83: train_loss: 0.4203 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 84.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 84: train_loss: 0.4204 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 85.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 85: train_loss: 0.4205 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 86.
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: # Epoch 86: train_loss: 0.4205 | lr: 0.000338
+[2023-03-21 22:09:57] PRINT [03/21 22:09:57 graph]: start epoch 87.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 87: train_loss: 0.4189 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 88.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 88: train_loss: 0.4174 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 89.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 89: train_loss: 0.4187 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 90.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 90: train_loss: 0.4165 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 91.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 91: train_loss: 0.4165 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 92.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 92: train_loss: 0.4163 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 93.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 93: train_loss: 0.4149 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 94.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 94: train_loss: 0.4154 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 95.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 95: train_loss: 0.4134 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 96.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 96: train_loss: 0.4141 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 97.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 97: train_loss: 0.4128 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 98.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 98: train_loss: 0.4128 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 99.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 99: train_loss: 0.4123 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 100.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 100: train_loss: 0.4117 | lr: 0.000338
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: start epoch 101.
+[2023-03-21 22:09:58] PRINT [03/21 22:09:58 graph]: # Epoch 101: train_loss: 0.4111 | lr: 0.000338
+[2023-03-21 22:10:01] PRINT [03/21 22:10:01 graph]: --- Testf1: 0.93399, Best Valacc: 0.92418 in epoch 70 --- 
+[2023-03-21 22:10:01] PRINT [03/21 22:10:01 graph]: Epoch 101: get test acc score:  0.934
+[2023-03-21 22:10:01] PRINT [03/21 22:10:01 graph]: best_f1 0.934 at epoch 101
+[2023-03-21 22:10:01] PRINT [03/21 22:10:01 graph]: start epoch 102.
+[2023-03-21 22:10:01] PRINT [03/21 22:10:01 graph]: # Epoch 102: train_loss: 0.4113 | lr: 0.000338
+[2023-03-21 22:10:04] PRINT [03/21 22:10:04 graph]: --- Testf1: 0.93382, Best Valacc: 0.92418 in epoch 99 --- 
+[2023-03-21 22:10:04] PRINT [03/21 22:10:04 graph]: Epoch 102: get test acc score:  0.934
+[2023-03-21 22:10:04] PRINT [03/21 22:10:04 graph]: best_f1 0.934 at epoch 101
+[2023-03-21 22:10:04] PRINT [03/21 22:10:04 graph]: start epoch 103.
+[2023-03-21 22:10:04] PRINT [03/21 22:10:04 graph]: # Epoch 103: train_loss: 0.4117 | lr: 0.000338
+[2023-03-21 22:10:07] PRINT [03/21 22:10:07 graph]: --- Testf1: 0.93448, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:10:07] PRINT [03/21 22:10:07 graph]: Epoch 103: get test acc score:  0.934
+[2023-03-21 22:10:07] PRINT [03/21 22:10:07 graph]: best_f1 0.934 at epoch 103
+[2023-03-21 22:10:07] PRINT [03/21 22:10:07 graph]: start epoch 104.
+[2023-03-21 22:10:07] PRINT [03/21 22:10:07 graph]: # Epoch 104: train_loss: 0.4136 | lr: 0.000338
+[2023-03-21 22:10:10] PRINT [03/21 22:10:10 graph]: --- Testf1: 0.93562, Best Valacc: 0.93072 in epoch 89 --- 
+[2023-03-21 22:10:10] PRINT [03/21 22:10:10 graph]: Epoch 104: get test acc score:  0.936
+[2023-03-21 22:10:10] PRINT [03/21 22:10:10 graph]: best_f1 0.936 at epoch 104
+[2023-03-21 22:10:10] PRINT [03/21 22:10:10 graph]: start epoch 105.
+[2023-03-21 22:10:10] PRINT [03/21 22:10:10 graph]: # Epoch 105: train_loss: 0.4105 | lr: 0.000338
+[2023-03-21 22:10:13] PRINT [03/21 22:10:13 graph]: --- Testf1: 0.93611, Best Valacc: 0.92941 in epoch 89 --- 
+[2023-03-21 22:10:13] PRINT [03/21 22:10:13 graph]: Epoch 105: get test acc score:  0.936
+[2023-03-21 22:10:13] PRINT [03/21 22:10:13 graph]: best_f1 0.936 at epoch 105
+[2023-03-21 22:10:13] PRINT [03/21 22:10:13 graph]: start epoch 106.
+[2023-03-21 22:10:13] PRINT [03/21 22:10:13 graph]: # Epoch 106: train_loss: 0.4109 | lr: 0.000338
+[2023-03-21 22:10:16] PRINT [03/21 22:10:16 graph]: --- Testf1: 0.93448, Best Valacc: 0.92157 in epoch 80 --- 
+[2023-03-21 22:10:16] PRINT [03/21 22:10:16 graph]: Epoch 106: get test acc score:  0.934
+[2023-03-21 22:10:16] PRINT [03/21 22:10:16 graph]: best_f1 0.936 at epoch 105
+[2023-03-21 22:10:16] PRINT [03/21 22:10:16 graph]: start epoch 107.
+[2023-03-21 22:10:16] PRINT [03/21 22:10:16 graph]: # Epoch 107: train_loss: 0.4097 | lr: 0.000338
+[2023-03-21 22:10:19] PRINT [03/21 22:10:19 graph]: --- Testf1: 0.93529, Best Valacc: 0.92549 in epoch 75 --- 
+[2023-03-21 22:10:19] PRINT [03/21 22:10:19 graph]: Epoch 107: get test acc score:  0.935
+[2023-03-21 22:10:19] PRINT [03/21 22:10:19 graph]: best_f1 0.936 at epoch 105
+[2023-03-21 22:10:19] PRINT [03/21 22:10:19 graph]: start epoch 108.
+[2023-03-21 22:10:19] PRINT [03/21 22:10:19 graph]: # Epoch 108: train_loss: 0.4090 | lr: 0.000338
+[2023-03-21 22:10:22] PRINT [03/21 22:10:22 graph]: --- Testf1: 0.93807, Best Valacc: 0.92418 in epoch 99 --- 
+[2023-03-21 22:10:22] PRINT [03/21 22:10:22 graph]: Epoch 108: get test acc score:  0.938
+[2023-03-21 22:10:22] PRINT [03/21 22:10:22 graph]: best_f1 0.938 at epoch 108
+[2023-03-21 22:10:22] PRINT [03/21 22:10:22 graph]: start epoch 109.
+[2023-03-21 22:10:22] PRINT [03/21 22:10:22 graph]: # Epoch 109: train_loss: 0.4089 | lr: 0.000338
+[2023-03-21 22:10:25] PRINT [03/21 22:10:25 graph]: --- Testf1: 0.93791, Best Valacc: 0.93203 in epoch 94 --- 
+[2023-03-21 22:10:25] PRINT [03/21 22:10:25 graph]: Epoch 109: get test acc score:  0.938
+[2023-03-21 22:10:25] PRINT [03/21 22:10:25 graph]: best_f1 0.938 at epoch 108
+[2023-03-21 22:10:25] PRINT [03/21 22:10:25 graph]: start epoch 110.
+[2023-03-21 22:10:25] PRINT [03/21 22:10:25 graph]: # Epoch 110: train_loss: 0.4090 | lr: 0.000338
+[2023-03-21 22:10:28] PRINT [03/21 22:10:28 graph]: --- Testf1: 0.93399, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:10:28] PRINT [03/21 22:10:28 graph]: Epoch 110: get test acc score:  0.934
+[2023-03-21 22:10:28] PRINT [03/21 22:10:28 graph]: best_f1 0.938 at epoch 108
+[2023-03-21 22:10:28] PRINT [03/21 22:10:28 graph]: start epoch 111.
+[2023-03-21 22:10:28] PRINT [03/21 22:10:28 graph]: # Epoch 111: train_loss: 0.4070 | lr: 0.000338
+[2023-03-21 22:10:31] PRINT [03/21 22:10:31 graph]: --- Testf1: 0.93611, Best Valacc: 0.92549 in epoch 90 --- 
+[2023-03-21 22:10:31] PRINT [03/21 22:10:31 graph]: Epoch 111: get test acc score:  0.936
+[2023-03-21 22:10:31] PRINT [03/21 22:10:31 graph]: best_f1 0.938 at epoch 108
+[2023-03-21 22:10:31] PRINT [03/21 22:10:31 graph]: start epoch 112.
+[2023-03-21 22:10:31] PRINT [03/21 22:10:31 graph]: # Epoch 112: train_loss: 0.4074 | lr: 0.000338
+[2023-03-21 22:10:34] PRINT [03/21 22:10:34 graph]: --- Testf1: 0.93824, Best Valacc: 0.92549 in epoch 51 --- 
+[2023-03-21 22:10:34] PRINT [03/21 22:10:34 graph]: Epoch 112: get test acc score:  0.938
+[2023-03-21 22:10:34] PRINT [03/21 22:10:34 graph]: best_f1 0.938 at epoch 112
+[2023-03-21 22:10:34] PRINT [03/21 22:10:34 graph]: start epoch 113.
+[2023-03-21 22:10:34] PRINT [03/21 22:10:34 graph]: # Epoch 113: train_loss: 0.4069 | lr: 0.000338
+[2023-03-21 22:10:37] PRINT [03/21 22:10:37 graph]: --- Testf1: 0.93905, Best Valacc: 0.92418 in epoch 99 --- 
+[2023-03-21 22:10:37] PRINT [03/21 22:10:37 graph]: Epoch 113: get test acc score:  0.939
+[2023-03-21 22:10:37] PRINT [03/21 22:10:37 graph]: best_f1 0.939 at epoch 113
+[2023-03-21 22:10:37] PRINT [03/21 22:10:37 graph]: start epoch 114.
+[2023-03-21 22:10:37] PRINT [03/21 22:10:37 graph]: # Epoch 114: train_loss: 0.4060 | lr: 0.000338
+[2023-03-21 22:10:40] PRINT [03/21 22:10:40 graph]: --- Testf1: 0.93660, Best Valacc: 0.93203 in epoch 47 --- 
+[2023-03-21 22:10:40] PRINT [03/21 22:10:40 graph]: Epoch 114: get test acc score:  0.937
+[2023-03-21 22:10:40] PRINT [03/21 22:10:40 graph]: best_f1 0.939 at epoch 113
+[2023-03-21 22:10:40] PRINT [03/21 22:10:40 graph]: start epoch 115.
+[2023-03-21 22:10:40] PRINT [03/21 22:10:40 graph]: # Epoch 115: train_loss: 0.4062 | lr: 0.000338
+[2023-03-21 22:10:43] PRINT [03/21 22:10:43 graph]: --- Testf1: 0.93856, Best Valacc: 0.93072 in epoch 66 --- 
+[2023-03-21 22:10:43] PRINT [03/21 22:10:43 graph]: Epoch 115: get test acc score:  0.939
+[2023-03-21 22:10:43] PRINT [03/21 22:10:43 graph]: best_f1 0.939 at epoch 113
+[2023-03-21 22:10:43] PRINT [03/21 22:10:43 graph]: start epoch 116.
+[2023-03-21 22:10:43] PRINT [03/21 22:10:43 graph]: # Epoch 116: train_loss: 0.4054 | lr: 0.000338
+[2023-03-21 22:10:46] PRINT [03/21 22:10:46 graph]: --- Testf1: 0.93987, Best Valacc: 0.92549 in epoch 98 --- 
+[2023-03-21 22:10:46] PRINT [03/21 22:10:46 graph]: Epoch 116: get test acc score:  0.940
+[2023-03-21 22:10:46] PRINT [03/21 22:10:46 graph]: best_f1 0.940 at epoch 116
+[2023-03-21 22:10:46] PRINT [03/21 22:10:46 graph]: start epoch 117.
+[2023-03-21 22:10:46] PRINT [03/21 22:10:46 graph]: # Epoch 117: train_loss: 0.4045 | lr: 0.000338
+[2023-03-21 22:10:49] PRINT [03/21 22:10:49 graph]: --- Testf1: 0.93938, Best Valacc: 0.92810 in epoch 99 --- 
+[2023-03-21 22:10:49] PRINT [03/21 22:10:49 graph]: Epoch 117: get test acc score:  0.939
+[2023-03-21 22:10:49] PRINT [03/21 22:10:49 graph]: best_f1 0.940 at epoch 116
+[2023-03-21 22:10:49] PRINT [03/21 22:10:49 graph]: start epoch 118.
+[2023-03-21 22:10:49] PRINT [03/21 22:10:49 graph]: # Epoch 118: train_loss: 0.4039 | lr: 0.000338
+[2023-03-21 22:10:52] PRINT [03/21 22:10:52 graph]: --- Testf1: 0.93725, Best Valacc: 0.92810 in epoch 99 --- 
+[2023-03-21 22:10:52] PRINT [03/21 22:10:52 graph]: Epoch 118: get test acc score:  0.937
+[2023-03-21 22:10:52] PRINT [03/21 22:10:52 graph]: best_f1 0.940 at epoch 116
+[2023-03-21 22:10:52] PRINT [03/21 22:10:52 graph]: start epoch 119.
+[2023-03-21 22:10:52] PRINT [03/21 22:10:52 graph]: # Epoch 119: train_loss: 0.4041 | lr: 0.000338
+[2023-03-21 22:10:55] PRINT [03/21 22:10:55 graph]: --- Testf1: 0.94118, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:10:55] PRINT [03/21 22:10:55 graph]: Epoch 119: get test acc score:  0.941
+[2023-03-21 22:10:55] PRINT [03/21 22:10:55 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:10:55] PRINT [03/21 22:10:55 graph]: start epoch 120.
+[2023-03-21 22:10:55] PRINT [03/21 22:10:55 graph]: # Epoch 120: train_loss: 0.4034 | lr: 0.000338
+[2023-03-21 22:10:58] PRINT [03/21 22:10:58 graph]: --- Testf1: 0.93807, Best Valacc: 0.92418 in epoch 99 --- 
+[2023-03-21 22:10:58] PRINT [03/21 22:10:58 graph]: Epoch 120: get test acc score:  0.938
+[2023-03-21 22:10:58] PRINT [03/21 22:10:58 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:10:58] PRINT [03/21 22:10:58 graph]: start epoch 121.
+[2023-03-21 22:10:58] PRINT [03/21 22:10:58 graph]: # Epoch 121: train_loss: 0.4037 | lr: 0.000338
+[2023-03-21 22:11:01] PRINT [03/21 22:11:01 graph]: --- Testf1: 0.93693, Best Valacc: 0.92680 in epoch 84 --- 
+[2023-03-21 22:11:01] PRINT [03/21 22:11:01 graph]: Epoch 121: get test acc score:  0.937
+[2023-03-21 22:11:01] PRINT [03/21 22:11:01 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:01] PRINT [03/21 22:11:01 graph]: start epoch 122.
+[2023-03-21 22:11:01] PRINT [03/21 22:11:01 graph]: # Epoch 122: train_loss: 0.4031 | lr: 0.000338
+[2023-03-21 22:11:04] PRINT [03/21 22:11:04 graph]: --- Testf1: 0.93856, Best Valacc: 0.92418 in epoch 99 --- 
+[2023-03-21 22:11:04] PRINT [03/21 22:11:04 graph]: Epoch 122: get test acc score:  0.939
+[2023-03-21 22:11:04] PRINT [03/21 22:11:04 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:04] PRINT [03/21 22:11:04 graph]: start epoch 123.
+[2023-03-21 22:11:04] PRINT [03/21 22:11:04 graph]: # Epoch 123: train_loss: 0.4025 | lr: 0.000338
+[2023-03-21 22:11:07] PRINT [03/21 22:11:07 graph]: --- Testf1: 0.93873, Best Valacc: 0.92941 in epoch 34 --- 
+[2023-03-21 22:11:07] PRINT [03/21 22:11:07 graph]: Epoch 123: get test acc score:  0.939
+[2023-03-21 22:11:07] PRINT [03/21 22:11:07 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:07] PRINT [03/21 22:11:07 graph]: start epoch 124.
+[2023-03-21 22:11:07] PRINT [03/21 22:11:07 graph]: # Epoch 124: train_loss: 0.4017 | lr: 0.000338
+[2023-03-21 22:11:10] PRINT [03/21 22:11:10 graph]: --- Testf1: 0.93856, Best Valacc: 0.93072 in epoch 78 --- 
+[2023-03-21 22:11:10] PRINT [03/21 22:11:10 graph]: Epoch 124: get test acc score:  0.939
+[2023-03-21 22:11:10] PRINT [03/21 22:11:10 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:10] PRINT [03/21 22:11:10 graph]: start epoch 125.
+[2023-03-21 22:11:10] PRINT [03/21 22:11:10 graph]: # Epoch 125: train_loss: 0.4023 | lr: 0.000338
+[2023-03-21 22:11:13] PRINT [03/21 22:11:13 graph]: --- Testf1: 0.93317, Best Valacc: 0.93072 in epoch 69 --- 
+[2023-03-21 22:11:13] PRINT [03/21 22:11:13 graph]: Epoch 125: get test acc score:  0.933
+[2023-03-21 22:11:13] PRINT [03/21 22:11:13 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:13] PRINT [03/21 22:11:13 graph]: start epoch 126.
+[2023-03-21 22:11:13] PRINT [03/21 22:11:13 graph]: # Epoch 126: train_loss: 0.4026 | lr: 0.000338
+[2023-03-21 22:11:16] PRINT [03/21 22:11:16 graph]: --- Testf1: 0.93791, Best Valacc: 0.92418 in epoch 99 --- 
+[2023-03-21 22:11:16] PRINT [03/21 22:11:16 graph]: Epoch 126: get test acc score:  0.938
+[2023-03-21 22:11:16] PRINT [03/21 22:11:16 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:16] PRINT [03/21 22:11:16 graph]: start epoch 127.
+[2023-03-21 22:11:16] PRINT [03/21 22:11:16 graph]: # Epoch 127: train_loss: 0.4021 | lr: 0.000338
+[2023-03-21 22:11:19] PRINT [03/21 22:11:19 graph]: --- Testf1: 0.93807, Best Valacc: 0.92810 in epoch 99 --- 
+[2023-03-21 22:11:19] PRINT [03/21 22:11:19 graph]: Epoch 127: get test acc score:  0.938
+[2023-03-21 22:11:19] PRINT [03/21 22:11:19 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:19] PRINT [03/21 22:11:19 graph]: start epoch 128.
+[2023-03-21 22:11:19] PRINT [03/21 22:11:19 graph]: # Epoch 128: train_loss: 0.4026 | lr: 0.000338
+[2023-03-21 22:11:22] PRINT [03/21 22:11:22 graph]: --- Testf1: 0.93922, Best Valacc: 0.92549 in epoch 99 --- 
+[2023-03-21 22:11:22] PRINT [03/21 22:11:22 graph]: Epoch 128: get test acc score:  0.939
+[2023-03-21 22:11:22] PRINT [03/21 22:11:22 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:22] PRINT [03/21 22:11:22 graph]: start epoch 129.
+[2023-03-21 22:11:22] PRINT [03/21 22:11:22 graph]: # Epoch 129: train_loss: 0.4042 | lr: 0.000338
+[2023-03-21 22:11:25] PRINT [03/21 22:11:25 graph]: --- Testf1: 0.93709, Best Valacc: 0.92941 in epoch 97 --- 
+[2023-03-21 22:11:25] PRINT [03/21 22:11:25 graph]: Epoch 129: get test acc score:  0.937
+[2023-03-21 22:11:25] PRINT [03/21 22:11:25 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:25] PRINT [03/21 22:11:25 graph]: start epoch 130.
+[2023-03-21 22:11:25] PRINT [03/21 22:11:25 graph]: # Epoch 130: train_loss: 0.4047 | lr: 0.000338
+[2023-03-21 22:11:27] PRINT [03/21 22:11:27 graph]: --- Testf1: 0.93775, Best Valacc: 0.92157 in epoch 91 --- 
+[2023-03-21 22:11:28] PRINT [03/21 22:11:28 graph]: Epoch 130: get test acc score:  0.938
+[2023-03-21 22:11:28] PRINT [03/21 22:11:28 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:28] PRINT [03/21 22:11:28 graph]: start epoch 131.
+[2023-03-21 22:11:28] PRINT [03/21 22:11:28 graph]: # Epoch 131: train_loss: 0.4017 | lr: 0.000338
+[2023-03-21 22:11:30] PRINT [03/21 22:11:30 graph]: --- Testf1: 0.93938, Best Valacc: 0.93072 in epoch 94 --- 
+[2023-03-21 22:11:31] PRINT [03/21 22:11:31 graph]: Epoch 131: get test acc score:  0.939
+[2023-03-21 22:11:31] PRINT [03/21 22:11:31 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:31] PRINT [03/21 22:11:31 graph]: start epoch 132.
+[2023-03-21 22:11:31] PRINT [03/21 22:11:31 graph]: # Epoch 132: train_loss: 0.4021 | lr: 0.000338
+[2023-03-21 22:11:33] PRINT [03/21 22:11:33 graph]: --- Testf1: 0.94036, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:11:34] PRINT [03/21 22:11:34 graph]: Epoch 132: get test acc score:  0.940
+[2023-03-21 22:11:34] PRINT [03/21 22:11:34 graph]: best_f1 0.941 at epoch 119
+[2023-03-21 22:11:34] PRINT [03/21 22:11:34 graph]: start epoch 133.
+[2023-03-21 22:11:34] PRINT [03/21 22:11:34 graph]: # Epoch 133: train_loss: 0.4017 | lr: 0.000338
+[2023-03-21 22:11:36] PRINT [03/21 22:11:36 graph]: --- Testf1: 0.94134, Best Valacc: 0.92810 in epoch 39 --- 
+[2023-03-21 22:11:36] PRINT [03/21 22:11:36 graph]: Epoch 133: get test acc score:  0.941
+[2023-03-21 22:11:36] PRINT [03/21 22:11:36 graph]: best_f1 0.941 at epoch 133
+[2023-03-21 22:11:36] PRINT [03/21 22:11:36 graph]: start epoch 134.
+[2023-03-21 22:11:36] PRINT [03/21 22:11:36 graph]: # Epoch 134: train_loss: 0.4001 | lr: 0.000338
+[2023-03-21 22:11:38] PRINT [03/21 22:11:38 graph]: --- Testf1: 0.94101, Best Valacc: 0.93072 in epoch 78 --- 
+[2023-03-21 22:11:38] PRINT [03/21 22:11:38 graph]: Epoch 134: get test acc score:  0.941
+[2023-03-21 22:11:38] PRINT [03/21 22:11:38 graph]: best_f1 0.941 at epoch 133
+[2023-03-21 22:11:38] PRINT [03/21 22:11:38 graph]: start epoch 135.
+[2023-03-21 22:11:38] PRINT [03/21 22:11:38 graph]: # Epoch 135: train_loss: 0.3997 | lr: 0.000338
+[2023-03-21 22:11:41] PRINT [03/21 22:11:41 graph]: --- Testf1: 0.93987, Best Valacc: 0.92549 in epoch 84 --- 
+[2023-03-21 22:11:41] PRINT [03/21 22:11:41 graph]: Epoch 135: get test acc score:  0.940
+[2023-03-21 22:11:41] PRINT [03/21 22:11:41 graph]: best_f1 0.941 at epoch 133
+[2023-03-21 22:11:41] PRINT [03/21 22:11:41 graph]: start epoch 136.
+[2023-03-21 22:11:41] PRINT [03/21 22:11:41 graph]: # Epoch 136: train_loss: 0.3996 | lr: 0.000338
+[2023-03-21 22:11:43] PRINT [03/21 22:11:43 graph]: --- Testf1: 0.94118, Best Valacc: 0.92810 in epoch 69 --- 
+[2023-03-21 22:11:43] PRINT [03/21 22:11:43 graph]: Epoch 136: get test acc score:  0.941
+[2023-03-21 22:11:43] PRINT [03/21 22:11:43 graph]: best_f1 0.941 at epoch 133
+[2023-03-21 22:11:43] PRINT [03/21 22:11:43 graph]: start epoch 137.
+[2023-03-21 22:11:43] PRINT [03/21 22:11:43 graph]: # Epoch 137: train_loss: 0.3990 | lr: 0.000338
+[2023-03-21 22:11:46] PRINT [03/21 22:11:46 graph]: --- Testf1: 0.94232, Best Valacc: 0.92810 in epoch 99 --- 
+[2023-03-21 22:11:46] PRINT [03/21 22:11:46 graph]: Epoch 137: get test acc score:  0.942
+[2023-03-21 22:11:46] PRINT [03/21 22:11:46 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:11:46] PRINT [03/21 22:11:46 graph]: start epoch 138.
+[2023-03-21 22:11:46] PRINT [03/21 22:11:46 graph]: # Epoch 138: train_loss: 0.3986 | lr: 0.000338
+[2023-03-21 22:11:48] PRINT [03/21 22:11:48 graph]: --- Testf1: 0.93840, Best Valacc: 0.92288 in epoch 99 --- 
+[2023-03-21 22:11:48] PRINT [03/21 22:11:48 graph]: Epoch 138: get test acc score:  0.938
+[2023-03-21 22:11:48] PRINT [03/21 22:11:48 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:11:48] PRINT [03/21 22:11:48 graph]: start epoch 139.
+[2023-03-21 22:11:48] PRINT [03/21 22:11:48 graph]: # Epoch 139: train_loss: 0.3983 | lr: 0.000338
+[2023-03-21 22:11:51] PRINT [03/21 22:11:51 graph]: --- Testf1: 0.94020, Best Valacc: 0.92810 in epoch 99 --- 
+[2023-03-21 22:11:51] PRINT [03/21 22:11:51 graph]: Epoch 139: get test acc score:  0.940
+[2023-03-21 22:11:51] PRINT [03/21 22:11:51 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:11:51] PRINT [03/21 22:11:51 graph]: start epoch 140.
+[2023-03-21 22:11:51] PRINT [03/21 22:11:51 graph]: # Epoch 140: train_loss: 0.3979 | lr: 0.000338
+[2023-03-21 22:11:53] PRINT [03/21 22:11:53 graph]: --- Testf1: 0.94003, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:11:53] PRINT [03/21 22:11:53 graph]: Epoch 140: get test acc score:  0.940
+[2023-03-21 22:11:53] PRINT [03/21 22:11:53 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:11:53] PRINT [03/21 22:11:53 graph]: start epoch 141.
+[2023-03-21 22:11:53] PRINT [03/21 22:11:53 graph]: # Epoch 141: train_loss: 0.3980 | lr: 0.000338
+[2023-03-21 22:11:55] PRINT [03/21 22:11:55 graph]: --- Testf1: 0.94003, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:11:55] PRINT [03/21 22:11:55 graph]: Epoch 141: get test acc score:  0.940
+[2023-03-21 22:11:55] PRINT [03/21 22:11:55 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:11:55] PRINT [03/21 22:11:55 graph]: start epoch 142.
+[2023-03-21 22:11:55] PRINT [03/21 22:11:55 graph]: # Epoch 142: train_loss: 0.3992 | lr: 0.000338
+[2023-03-21 22:11:57] PRINT [03/21 22:11:57 graph]: --- Testf1: 0.93938, Best Valacc: 0.92288 in epoch 99 --- 
+[2023-03-21 22:11:57] PRINT [03/21 22:11:57 graph]: Epoch 142: get test acc score:  0.939
+[2023-03-21 22:11:57] PRINT [03/21 22:11:57 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:11:57] PRINT [03/21 22:11:57 graph]: start epoch 143.
+[2023-03-21 22:11:57] PRINT [03/21 22:11:57 graph]: # Epoch 143: train_loss: 0.3997 | lr: 0.000338
+[2023-03-21 22:11:59] PRINT [03/21 22:11:59 graph]: --- Testf1: 0.94118, Best Valacc: 0.93072 in epoch 86 --- 
+[2023-03-21 22:11:59] PRINT [03/21 22:11:59 graph]: Epoch 143: get test acc score:  0.941
+[2023-03-21 22:11:59] PRINT [03/21 22:11:59 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:11:59] PRINT [03/21 22:11:59 graph]: start epoch 144.
+[2023-03-21 22:11:59] PRINT [03/21 22:11:59 graph]: # Epoch 144: train_loss: 0.3961 | lr: 0.000338
+[2023-03-21 22:12:00] PRINT [03/21 22:12:00 graph]: --- Testf1: 0.93889, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:12:00] PRINT [03/21 22:12:00 graph]: Epoch 144: get test acc score:  0.939
+[2023-03-21 22:12:00] PRINT [03/21 22:12:00 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:12:00] PRINT [03/21 22:12:00 graph]: start epoch 145.
+[2023-03-21 22:12:00] PRINT [03/21 22:12:00 graph]: # Epoch 145: train_loss: 0.3973 | lr: 0.000338
+[2023-03-21 22:12:02] PRINT [03/21 22:12:02 graph]: --- Testf1: 0.93889, Best Valacc: 0.92157 in epoch 99 --- 
+[2023-03-21 22:12:02] PRINT [03/21 22:12:02 graph]: Epoch 145: get test acc score:  0.939
+[2023-03-21 22:12:02] PRINT [03/21 22:12:02 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:12:02] PRINT [03/21 22:12:02 graph]: start epoch 146.
+[2023-03-21 22:12:02] PRINT [03/21 22:12:02 graph]: # Epoch 146: train_loss: 0.3961 | lr: 0.000338
+[2023-03-21 22:12:03] PRINT [03/21 22:12:03 graph]: --- Testf1: 0.93807, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:12:03] PRINT [03/21 22:12:03 graph]: Epoch 146: get test acc score:  0.938
+[2023-03-21 22:12:03] PRINT [03/21 22:12:03 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:12:03] PRINT [03/21 22:12:03 graph]: start epoch 147.
+[2023-03-21 22:12:03] PRINT [03/21 22:12:03 graph]: # Epoch 147: train_loss: 0.3969 | lr: 0.000338
+[2023-03-21 22:12:05] PRINT [03/21 22:12:05 graph]: --- Testf1: 0.93791, Best Valacc: 0.93072 in epoch 72 --- 
+[2023-03-21 22:12:05] PRINT [03/21 22:12:05 graph]: Epoch 147: get test acc score:  0.938
+[2023-03-21 22:12:05] PRINT [03/21 22:12:05 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:12:05] PRINT [03/21 22:12:05 graph]: start epoch 148.
+[2023-03-21 22:12:05] PRINT [03/21 22:12:05 graph]: # Epoch 148: train_loss: 0.3959 | lr: 0.000338
+[2023-03-21 22:12:06] PRINT [03/21 22:12:06 graph]: --- Testf1: 0.93954, Best Valacc: 0.92680 in epoch 99 --- 
+[2023-03-21 22:12:06] PRINT [03/21 22:12:06 graph]: Epoch 148: get test acc score:  0.940
+[2023-03-21 22:12:06] PRINT [03/21 22:12:06 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:12:06] PRINT [03/21 22:12:06 graph]: start epoch 149.
+[2023-03-21 22:12:06] PRINT [03/21 22:12:06 graph]: # Epoch 149: train_loss: 0.3947 | lr: 0.000338
+[2023-03-21 22:12:07] PRINT [03/21 22:12:07 graph]: --- Testf1: 0.93905, Best Valacc: 0.92288 in epoch 89 --- 
+[2023-03-21 22:12:08] PRINT [03/21 22:12:08 graph]: Epoch 149: get test acc score:  0.939
+[2023-03-21 22:12:08] PRINT [03/21 22:12:08 graph]: best_f1 0.942 at epoch 137
+[2023-03-21 22:12:08] PRINT [03/21 22:12:08 graph]: # final_acc: 0.9423±0.0000

@@ -1,0 +1,247 @@
+[2023-04-07 10:35:25] PRINT ---new cfg------
+[2023-04-07 10:35:25] PRINT {'DATA': {'data_name': 'REDDIT-BINARY', 'deg4feat': False}, 'DATALOADER': {'NUM_WORKERS': 0, 'BATCH_SIZE': 32}, 'MODEL': {'num_hidden': 512, 'num_layers': 2, 'nhead': 8, 'activation': 'prelu', 'attn_drop': 0.4, 'feat_drop': 0.2, 'norm': 'batchnorm', 'pooler': 'mean', 'beta_schedule': 'quad', 'beta_1': 0.0003243118256209305, 'beta_T': 0.06434426618306129, 'T': 446}, 'SOLVER': {'optim_type': 'adamw', 'optim_type_f': 'adamw', 'alpha': 1, 'decay': 30, 'LR': 0.000182562761329866, 'weight_decay': 0.0005, 'MAX_EPOCH': 50}, 'DEVICE': 'cuda', 'seeds': [11], 'eval_T': [50, 100, 200], 'output_dir': '/ddm-nni/REDDIT-B/log', 'checkpoint_dir': '/ddm-nni/REDDIT-B/log/checkpoint'}
+[2023-04-07 10:35:25] PRINT [04/07 10:35:25 graph]: Rank of current process: 0. World size: 1
+[2023-04-07 10:35:28] PRINT [04/07 10:35:28 graph]: Environment info:
+[2023-04-07 10:35:28] PRINT PyTorch version: 1.10.0+cu113
+[2023-04-07 10:35:28] PRINT Is debug build: False
+[2023-04-07 10:35:28] PRINT CUDA used to build PyTorch: 11.3
+[2023-04-07 10:35:28] PRINT ROCM used to build PyTorch: N/A
+[2023-04-07 10:35:28] PRINT 
+[2023-04-07 10:35:28] PRINT OS: Ubuntu 20.04.3 LTS (x86_64)
+[2023-04-07 10:35:28] PRINT GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+[2023-04-07 10:35:28] PRINT Clang version: Could not collect
+[2023-04-07 10:35:28] PRINT CMake version: version 3.16.3
+[2023-04-07 10:35:28] PRINT Libc version: glibc-2.31
+[2023-04-07 10:35:28] PRINT 
+[2023-04-07 10:35:28] PRINT Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+[2023-04-07 10:35:28] PRINT Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+[2023-04-07 10:35:28] PRINT Is CUDA available: True
+[2023-04-07 10:35:28] PRINT CUDA runtime version: 11.3.109
+[2023-04-07 10:35:28] PRINT GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+[2023-04-07 10:35:28] PRINT Nvidia driver version: 495.44
+[2023-04-07 10:35:28] PRINT cuDNN version: Probably one of the following:
+[2023-04-07 10:35:28] PRINT /usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+[2023-04-07 10:35:28] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+[2023-04-07 10:35:28] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+[2023-04-07 10:35:28] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+[2023-04-07 10:35:28] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+[2023-04-07 10:35:28] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+[2023-04-07 10:35:28] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+[2023-04-07 10:35:28] PRINT HIP runtime version: N/A
+[2023-04-07 10:35:28] PRINT MIOpen runtime version: N/A
+[2023-04-07 10:35:28] PRINT 
+[2023-04-07 10:35:28] PRINT Versions of relevant libraries:
+[2023-04-07 10:35:28] PRINT [pip3] numpy==1.23.5
+[2023-04-07 10:35:28] PRINT [pip3] torch==1.10.0+cu113
+[2023-04-07 10:35:28] PRINT [pip3] torchvision==0.11.1+cu113
+[2023-04-07 10:35:28] PRINT [conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-04-07 10:35:28] PRINT [conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-04-07 10:35:28] PRINT [conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-04-07 10:35:28] PRINT [conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-04-07 10:35:28] PRINT [conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-04-07 10:35:28] PRINT [conda] numpy                     1.21.4                   pypi_0    pypi
+[2023-04-07 10:35:28] PRINT [conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-04-07 10:35:28] PRINT [conda] torch                     1.10.0+cu113             pypi_0    pypi
+[2023-04-07 10:35:28] PRINT [conda] torchvision               0.11.1+cu113             pypi_0    pypi
+[2023-04-07 10:35:28] PRINT         Pillow (8.4.0)
+[2023-04-07 10:35:28] PRINT [04/07 10:35:28 graph]: Command line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[2023-04-07 10:35:29] PRINT Using degree as node features
+[2023-04-07 10:35:35] PRINT ******** # Num Graphs: 2000, # Num Feat: 401, # Num Classes: 2 ********
+[2023-04-07 10:35:35] PRINT [04/07 10:35:35 graph]: Run 0th for seed 11
+[2023-04-07 10:35:35] PRINT [04/07 10:35:35 graph]: Total trainable params num : 6062543
+[2023-04-07 10:35:40] PRINT [04/07 10:35:40 graph]: ----------Start Training----------
+[2023-04-07 10:35:45] PRINT [04/07 10:35:45 graph]: Epoch 0 | train_loss: 0.3794 | lr: 0.000183
+[2023-04-07 10:35:49] PRINT [04/07 10:35:49 graph]: Epoch 1 | train_loss: 0.2062 | lr: 0.000183
+[2023-04-07 10:35:52] PRINT [04/07 10:35:52 graph]: Epoch 2 | train_loss: 0.1562 | lr: 0.000183
+[2023-04-07 10:36:51] PRINT [04/07 10:36:51 graph]: #Test_f1: 0.8435±0.0296
+[2023-04-07 10:36:51] PRINT [04/07 10:36:51 graph]: Epoch 2: get test f1 score:  0.844
+[2023-04-07 10:36:51] PRINT [04/07 10:36:51 graph]: best_f1 0.844 at epoch 2
+[2023-04-07 10:36:55] PRINT [04/07 10:36:55 graph]: Epoch 3 | train_loss: 0.1412 | lr: 0.000183
+[2023-04-07 10:37:54] PRINT [04/07 10:37:54 graph]: #Test_f1: 0.8525±0.0255
+[2023-04-07 10:37:55] PRINT [04/07 10:37:55 graph]: Epoch 3: get test f1 score:  0.853
+[2023-04-07 10:37:55] PRINT [04/07 10:37:55 graph]: best_f1 0.853 at epoch 3
+[2023-04-07 10:37:58] PRINT [04/07 10:37:58 graph]: Epoch 4 | train_loss: 0.1337 | lr: 0.000183
+[2023-04-07 10:38:57] PRINT [04/07 10:38:57 graph]: #Test_f1: 0.8575±0.0222
+[2023-04-07 10:38:58] PRINT [04/07 10:38:58 graph]: Epoch 4: get test f1 score:  0.857
+[2023-04-07 10:38:58] PRINT [04/07 10:38:58 graph]: best_f1 0.857 at epoch 4
+[2023-04-07 10:39:01] PRINT [04/07 10:39:01 graph]: Epoch 5 | train_loss: 0.1280 | lr: 0.000183
+[2023-04-07 10:39:59] PRINT [04/07 10:39:59 graph]: #Test_f1: 0.8535±0.0276
+[2023-04-07 10:40:00] PRINT [04/07 10:40:00 graph]: Epoch 5: get test f1 score:  0.854
+[2023-04-07 10:40:00] PRINT [04/07 10:40:00 graph]: best_f1 0.857 at epoch 4
+[2023-04-07 10:40:03] PRINT [04/07 10:40:03 graph]: Epoch 6 | train_loss: 0.1228 | lr: 0.000183
+[2023-04-07 10:41:02] PRINT [04/07 10:41:02 graph]: #Test_f1: 0.8535±0.0278
+[2023-04-07 10:41:02] PRINT [04/07 10:41:02 graph]: Epoch 6: get test f1 score:  0.853
+[2023-04-07 10:41:02] PRINT [04/07 10:41:02 graph]: best_f1 0.857 at epoch 4
+[2023-04-07 10:41:06] PRINT [04/07 10:41:06 graph]: Epoch 7 | train_loss: 0.1175 | lr: 0.000183
+[2023-04-07 10:42:11] PRINT [04/07 10:42:11 graph]: #Test_f1: 0.8510±0.0228
+[2023-04-07 10:42:11] PRINT [04/07 10:42:11 graph]: Epoch 7: get test f1 score:  0.851
+[2023-04-07 10:42:11] PRINT [04/07 10:42:11 graph]: best_f1 0.857 at epoch 4
+[2023-04-07 10:42:15] PRINT [04/07 10:42:15 graph]: Epoch 8 | train_loss: 0.1133 | lr: 0.000183
+[2023-04-07 10:43:19] PRINT [04/07 10:43:19 graph]: #Test_f1: 0.8485±0.0286
+[2023-04-07 10:43:20] PRINT [04/07 10:43:20 graph]: Epoch 8: get test f1 score:  0.848
+[2023-04-07 10:43:20] PRINT [04/07 10:43:20 graph]: best_f1 0.857 at epoch 4
+[2023-04-07 10:43:23] PRINT [04/07 10:43:23 graph]: Epoch 9 | train_loss: 0.1077 | lr: 0.000183
+[2023-04-07 10:44:27] PRINT [04/07 10:44:27 graph]: #Test_f1: 0.8580±0.0293
+[2023-04-07 10:44:27] PRINT [04/07 10:44:27 graph]: Epoch 9: get test f1 score:  0.858
+[2023-04-07 10:44:27] PRINT [04/07 10:44:27 graph]: best_f1 0.858 at epoch 9
+[2023-04-07 10:44:31] PRINT [04/07 10:44:31 graph]: Epoch 10 | train_loss: 0.1045 | lr: 0.000183
+[2023-04-07 10:45:34] PRINT [04/07 10:45:34 graph]: #Test_f1: 0.8550±0.0266
+[2023-04-07 10:45:35] PRINT [04/07 10:45:35 graph]: Epoch 10: get test f1 score:  0.855
+[2023-04-07 10:45:35] PRINT [04/07 10:45:35 graph]: best_f1 0.858 at epoch 9
+[2023-04-07 10:45:38] PRINT [04/07 10:45:38 graph]: Epoch 11 | train_loss: 0.1012 | lr: 0.000183
+[2023-04-07 10:46:41] PRINT [04/07 10:46:41 graph]: #Test_f1: 0.8495±0.0305
+[2023-04-07 10:46:42] PRINT [04/07 10:46:42 graph]: Epoch 11: get test f1 score:  0.849
+[2023-04-07 10:46:42] PRINT [04/07 10:46:42 graph]: best_f1 0.858 at epoch 9
+[2023-04-07 10:46:45] PRINT [04/07 10:46:45 graph]: Epoch 12 | train_loss: 0.0977 | lr: 0.000183
+[2023-04-07 10:47:47] PRINT [04/07 10:47:47 graph]: #Test_f1: 0.8585±0.0266
+[2023-04-07 10:47:47] PRINT [04/07 10:47:47 graph]: Epoch 12: get test f1 score:  0.858
+[2023-04-07 10:47:47] PRINT [04/07 10:47:47 graph]: best_f1 0.858 at epoch 12
+[2023-04-07 10:47:51] PRINT [04/07 10:47:51 graph]: Epoch 13 | train_loss: 0.1129 | lr: 0.000183
+[2023-04-07 10:48:54] PRINT [04/07 10:48:54 graph]: #Test_f1: 0.8490±0.0276
+[2023-04-07 10:48:54] PRINT [04/07 10:48:54 graph]: Epoch 13: get test f1 score:  0.849
+[2023-04-07 10:48:54] PRINT [04/07 10:48:54 graph]: best_f1 0.858 at epoch 12
+[2023-04-07 10:48:57] PRINT [04/07 10:48:57 graph]: Epoch 14 | train_loss: 0.0972 | lr: 0.000183
+[2023-04-07 10:49:55] PRINT [04/07 10:49:55 graph]: #Test_f1: 0.8540±0.0284
+[2023-04-07 10:49:55] PRINT [04/07 10:49:55 graph]: Epoch 14: get test f1 score:  0.854
+[2023-04-07 10:49:55] PRINT [04/07 10:49:55 graph]: best_f1 0.858 at epoch 12
+[2023-04-07 10:49:59] PRINT [04/07 10:49:59 graph]: Epoch 15 | train_loss: 0.0953 | lr: 0.000183
+[2023-04-07 10:50:54] PRINT [04/07 10:50:54 graph]: #Test_f1: 0.8595±0.0271
+[2023-04-07 10:50:55] PRINT [04/07 10:50:55 graph]: Epoch 15: get test f1 score:  0.860
+[2023-04-07 10:50:55] PRINT [04/07 10:50:55 graph]: best_f1 0.860 at epoch 15
+[2023-04-07 10:50:58] PRINT [04/07 10:50:58 graph]: Epoch 16 | train_loss: 0.0843 | lr: 0.000183
+[2023-04-07 10:51:54] PRINT [04/07 10:51:54 graph]: #Test_f1: 0.8565±0.0266
+[2023-04-07 10:51:54] PRINT [04/07 10:51:54 graph]: Epoch 16: get test f1 score:  0.856
+[2023-04-07 10:51:54] PRINT [04/07 10:51:54 graph]: best_f1 0.860 at epoch 15
+[2023-04-07 10:51:57] PRINT [04/07 10:51:57 graph]: Epoch 17 | train_loss: 0.0731 | lr: 0.000183
+[2023-04-07 10:52:52] PRINT [04/07 10:52:52 graph]: #Test_f1: 0.8635±0.0280
+[2023-04-07 10:52:52] PRINT [04/07 10:52:52 graph]: Epoch 17: get test f1 score:  0.863
+[2023-04-07 10:52:52] PRINT [04/07 10:52:52 graph]: best_f1 0.863 at epoch 17
+[2023-04-07 10:52:55] PRINT [04/07 10:52:55 graph]: Epoch 18 | train_loss: 0.0615 | lr: 0.000183
+[2023-04-07 10:53:50] PRINT [04/07 10:53:50 graph]: #Test_f1: 0.8600±0.0245
+[2023-04-07 10:53:51] PRINT [04/07 10:53:51 graph]: Epoch 18: get test f1 score:  0.860
+[2023-04-07 10:53:51] PRINT [04/07 10:53:51 graph]: best_f1 0.863 at epoch 17
+[2023-04-07 10:53:54] PRINT [04/07 10:53:54 graph]: Epoch 19 | train_loss: 0.0660 | lr: 0.000183
+[2023-04-07 10:54:48] PRINT [04/07 10:54:48 graph]: #Test_f1: 0.8685±0.0258
+[2023-04-07 10:54:48] PRINT [04/07 10:54:48 graph]: Epoch 19: get test f1 score:  0.868
+[2023-04-07 10:54:48] PRINT [04/07 10:54:48 graph]: best_f1 0.868 at epoch 19
+[2023-04-07 10:54:52] PRINT [04/07 10:54:52 graph]: Epoch 20 | train_loss: 0.0622 | lr: 0.000183
+[2023-04-07 10:55:47] PRINT [04/07 10:55:47 graph]: #Test_f1: 0.8640±0.0262
+[2023-04-07 10:55:48] PRINT [04/07 10:55:48 graph]: Epoch 20: get test f1 score:  0.864
+[2023-04-07 10:55:48] PRINT [04/07 10:55:48 graph]: best_f1 0.868 at epoch 19
+[2023-04-07 10:55:51] PRINT [04/07 10:55:51 graph]: Epoch 21 | train_loss: 0.0559 | lr: 0.000183
+[2023-04-07 10:56:47] PRINT [04/07 10:56:47 graph]: #Test_f1: 0.8640±0.0283
+[2023-04-07 10:56:48] PRINT [04/07 10:56:48 graph]: Epoch 21: get test f1 score:  0.864
+[2023-04-07 10:56:48] PRINT [04/07 10:56:48 graph]: best_f1 0.868 at epoch 19
+[2023-04-07 10:56:51] PRINT [04/07 10:56:51 graph]: Epoch 22 | train_loss: 0.0541 | lr: 0.000183
+[2023-04-07 10:57:48] PRINT [04/07 10:57:48 graph]: #Test_f1: 0.8635±0.0245
+[2023-04-07 10:57:48] PRINT [04/07 10:57:48 graph]: Epoch 22: get test f1 score:  0.863
+[2023-04-07 10:57:48] PRINT [04/07 10:57:48 graph]: best_f1 0.868 at epoch 19
+[2023-04-07 10:57:51] PRINT [04/07 10:57:51 graph]: Epoch 23 | train_loss: 0.0556 | lr: 0.000183
+[2023-04-07 10:58:47] PRINT [04/07 10:58:47 graph]: #Test_f1: 0.8635±0.0226
+[2023-04-07 10:58:47] PRINT [04/07 10:58:47 graph]: Epoch 23: get test f1 score:  0.863
+[2023-04-07 10:58:47] PRINT [04/07 10:58:47 graph]: best_f1 0.868 at epoch 19
+[2023-04-07 10:58:50] PRINT [04/07 10:58:50 graph]: Epoch 24 | train_loss: 0.0556 | lr: 0.000183
+[2023-04-07 10:59:47] PRINT [04/07 10:59:47 graph]: #Test_f1: 0.8645±0.0222
+[2023-04-07 10:59:48] PRINT [04/07 10:59:48 graph]: Epoch 24: get test f1 score:  0.864
+[2023-04-07 10:59:48] PRINT [04/07 10:59:48 graph]: best_f1 0.868 at epoch 19
+[2023-04-07 10:59:51] PRINT [04/07 10:59:51 graph]: Epoch 25 | train_loss: 0.0558 | lr: 0.000183
+[2023-04-07 11:00:45] PRINT [04/07 11:00:45 graph]: #Test_f1: 0.8690±0.0211
+[2023-04-07 11:00:46] PRINT [04/07 11:00:46 graph]: Epoch 25: get test f1 score:  0.869
+[2023-04-07 11:00:46] PRINT [04/07 11:00:46 graph]: best_f1 0.869 at epoch 25
+[2023-04-07 11:00:49] PRINT [04/07 11:00:49 graph]: Epoch 26 | train_loss: 0.0467 | lr: 0.000183
+[2023-04-07 11:01:45] PRINT [04/07 11:01:45 graph]: #Test_f1: 0.8675±0.0215
+[2023-04-07 11:01:45] PRINT [04/07 11:01:45 graph]: Epoch 26: get test f1 score:  0.868
+[2023-04-07 11:01:45] PRINT [04/07 11:01:45 graph]: best_f1 0.869 at epoch 25
+[2023-04-07 11:01:49] PRINT [04/07 11:01:49 graph]: Epoch 27 | train_loss: 0.0451 | lr: 0.000183
+[2023-04-07 11:02:43] PRINT [04/07 11:02:43 graph]: #Test_f1: 0.8725±0.0214
+[2023-04-07 11:02:43] PRINT [04/07 11:02:43 graph]: Epoch 27: get test f1 score:  0.872
+[2023-04-07 11:02:43] PRINT [04/07 11:02:43 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:02:47] PRINT [04/07 11:02:47 graph]: Epoch 28 | train_loss: 0.0473 | lr: 0.000183
+[2023-04-07 11:03:42] PRINT [04/07 11:03:42 graph]: #Test_f1: 0.8710±0.0205
+[2023-04-07 11:03:43] PRINT [04/07 11:03:43 graph]: Epoch 28: get test f1 score:  0.871
+[2023-04-07 11:03:43] PRINT [04/07 11:03:43 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:03:46] PRINT [04/07 11:03:46 graph]: Epoch 29 | train_loss: 0.0451 | lr: 0.000183
+[2023-04-07 11:04:39] PRINT [04/07 11:04:39 graph]: #Test_f1: 0.8680±0.0196
+[2023-04-07 11:04:40] PRINT [04/07 11:04:40 graph]: Epoch 29: get test f1 score:  0.868
+[2023-04-07 11:04:40] PRINT [04/07 11:04:40 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:04:43] PRINT [04/07 11:04:43 graph]: Epoch 30 | train_loss: 0.0439 | lr: 0.000183
+[2023-04-07 11:05:38] PRINT [04/07 11:05:38 graph]: #Test_f1: 0.8710±0.0203
+[2023-04-07 11:05:38] PRINT [04/07 11:05:38 graph]: Epoch 30: get test f1 score:  0.871
+[2023-04-07 11:05:38] PRINT [04/07 11:05:38 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:05:42] PRINT [04/07 11:05:42 graph]: Epoch 31 | train_loss: 0.0447 | lr: 0.000183
+[2023-04-07 11:06:37] PRINT [04/07 11:06:37 graph]: #Test_f1: 0.8695±0.0217
+[2023-04-07 11:06:37] PRINT [04/07 11:06:37 graph]: Epoch 31: get test f1 score:  0.870
+[2023-04-07 11:06:37] PRINT [04/07 11:06:37 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:06:40] PRINT [04/07 11:06:40 graph]: Epoch 32 | train_loss: 0.0430 | lr: 0.000183
+[2023-04-07 11:07:36] PRINT [04/07 11:07:36 graph]: #Test_f1: 0.8715±0.0245
+[2023-04-07 11:07:36] PRINT [04/07 11:07:36 graph]: Epoch 32: get test f1 score:  0.871
+[2023-04-07 11:07:36] PRINT [04/07 11:07:36 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:07:39] PRINT [04/07 11:07:39 graph]: Epoch 33 | train_loss: 0.0438 | lr: 0.000183
+[2023-04-07 11:08:33] PRINT [04/07 11:08:33 graph]: #Test_f1: 0.8710±0.0187
+[2023-04-07 11:08:33] PRINT [04/07 11:08:33 graph]: Epoch 33: get test f1 score:  0.871
+[2023-04-07 11:08:33] PRINT [04/07 11:08:33 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:08:36] PRINT [04/07 11:08:36 graph]: Epoch 34 | train_loss: 0.0593 | lr: 0.000183
+[2023-04-07 11:09:30] PRINT [04/07 11:09:30 graph]: #Test_f1: 0.8665±0.0256
+[2023-04-07 11:09:30] PRINT [04/07 11:09:30 graph]: Epoch 34: get test f1 score:  0.867
+[2023-04-07 11:09:30] PRINT [04/07 11:09:30 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:09:33] PRINT [04/07 11:09:33 graph]: Epoch 35 | train_loss: 0.0610 | lr: 0.000183
+[2023-04-07 11:10:27] PRINT [04/07 11:10:27 graph]: #Test_f1: 0.8615±0.0215
+[2023-04-07 11:10:27] PRINT [04/07 11:10:27 graph]: Epoch 35: get test f1 score:  0.861
+[2023-04-07 11:10:27] PRINT [04/07 11:10:27 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:10:31] PRINT [04/07 11:10:31 graph]: Epoch 36 | train_loss: 0.0640 | lr: 0.000183
+[2023-04-07 11:11:24] PRINT [04/07 11:11:24 graph]: #Test_f1: 0.8690±0.0244
+[2023-04-07 11:11:24] PRINT [04/07 11:11:24 graph]: Epoch 36: get test f1 score:  0.869
+[2023-04-07 11:11:24] PRINT [04/07 11:11:24 graph]: best_f1 0.872 at epoch 27
+[2023-04-07 11:11:28] PRINT [04/07 11:11:28 graph]: Epoch 37 | train_loss: 0.0455 | lr: 0.000183
+[2023-04-07 11:12:20] PRINT [04/07 11:12:20 graph]: #Test_f1: 0.8745±0.0235
+[2023-04-07 11:12:20] PRINT [04/07 11:12:20 graph]: Epoch 37: get test f1 score:  0.874
+[2023-04-07 11:12:20] PRINT [04/07 11:12:20 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:12:24] PRINT [04/07 11:12:24 graph]: Epoch 38 | train_loss: 0.0454 | lr: 0.000183
+[2023-04-07 11:13:17] PRINT [04/07 11:13:17 graph]: #Test_f1: 0.8710±0.0220
+[2023-04-07 11:13:17] PRINT [04/07 11:13:17 graph]: Epoch 38: get test f1 score:  0.871
+[2023-04-07 11:13:17] PRINT [04/07 11:13:17 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:13:21] PRINT [04/07 11:13:21 graph]: Epoch 39 | train_loss: 0.0419 | lr: 0.000183
+[2023-04-07 11:14:14] PRINT [04/07 11:14:14 graph]: #Test_f1: 0.8730±0.0201
+[2023-04-07 11:14:14] PRINT [04/07 11:14:14 graph]: Epoch 39: get test f1 score:  0.873
+[2023-04-07 11:14:14] PRINT [04/07 11:14:14 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:14:17] PRINT [04/07 11:14:17 graph]: Epoch 40 | train_loss: 0.0423 | lr: 0.000183
+[2023-04-07 11:15:10] PRINT [04/07 11:15:10 graph]: #Test_f1: 0.8730±0.0238
+[2023-04-07 11:15:10] PRINT [04/07 11:15:10 graph]: Epoch 40: get test f1 score:  0.873
+[2023-04-07 11:15:10] PRINT [04/07 11:15:10 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:15:13] PRINT [04/07 11:15:13 graph]: Epoch 41 | train_loss: 0.0419 | lr: 0.000183
+[2023-04-07 11:16:05] PRINT [04/07 11:16:05 graph]: #Test_f1: 0.8685±0.0215
+[2023-04-07 11:16:06] PRINT [04/07 11:16:06 graph]: Epoch 41: get test f1 score:  0.869
+[2023-04-07 11:16:06] PRINT [04/07 11:16:06 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:16:09] PRINT [04/07 11:16:09 graph]: Epoch 42 | train_loss: 0.0509 | lr: 0.000183
+[2023-04-07 11:17:04] PRINT [04/07 11:17:04 graph]: #Test_f1: 0.8625±0.0228
+[2023-04-07 11:17:04] PRINT [04/07 11:17:04 graph]: Epoch 42: get test f1 score:  0.863
+[2023-04-07 11:17:04] PRINT [04/07 11:17:04 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:17:08] PRINT [04/07 11:17:08 graph]: Epoch 43 | train_loss: 0.0478 | lr: 0.000183
+[2023-04-07 11:18:02] PRINT [04/07 11:18:02 graph]: #Test_f1: 0.8670±0.0252
+[2023-04-07 11:18:02] PRINT [04/07 11:18:02 graph]: Epoch 43: get test f1 score:  0.867
+[2023-04-07 11:18:02] PRINT [04/07 11:18:02 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:18:05] PRINT [04/07 11:18:05 graph]: Epoch 44 | train_loss: 0.0425 | lr: 0.000183
+[2023-04-07 11:18:59] PRINT [04/07 11:18:59 graph]: #Test_f1: 0.8685±0.0237
+[2023-04-07 11:18:59] PRINT [04/07 11:18:59 graph]: Epoch 44: get test f1 score:  0.868
+[2023-04-07 11:18:59] PRINT [04/07 11:18:59 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:19:03] PRINT [04/07 11:19:03 graph]: Epoch 45 | train_loss: 0.0398 | lr: 0.000183
+[2023-04-07 11:19:56] PRINT [04/07 11:19:56 graph]: #Test_f1: 0.8740±0.0219
+[2023-04-07 11:19:56] PRINT [04/07 11:19:56 graph]: Epoch 45: get test f1 score:  0.874
+[2023-04-07 11:19:56] PRINT [04/07 11:19:56 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:20:00] PRINT [04/07 11:20:00 graph]: Epoch 46 | train_loss: 0.0409 | lr: 0.000183
+[2023-04-07 11:20:52] PRINT [04/07 11:20:52 graph]: #Test_f1: 0.8725±0.0246
+[2023-04-07 11:20:53] PRINT [04/07 11:20:53 graph]: Epoch 46: get test f1 score:  0.872
+[2023-04-07 11:20:53] PRINT [04/07 11:20:53 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:20:56] PRINT [04/07 11:20:56 graph]: Epoch 47 | train_loss: 0.0421 | lr: 0.000183
+[2023-04-07 11:21:49] PRINT [04/07 11:21:49 graph]: #Test_f1: 0.8735±0.0235
+[2023-04-07 11:21:49] PRINT [04/07 11:21:49 graph]: Epoch 47: get test f1 score:  0.873
+[2023-04-07 11:21:49] PRINT [04/07 11:21:49 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:21:53] PRINT [04/07 11:21:53 graph]: Epoch 48 | train_loss: 0.0390 | lr: 0.000183
+[2023-04-07 11:22:44] PRINT [04/07 11:22:44 graph]: #Test_f1: 0.8725±0.0218
+[2023-04-07 11:22:44] PRINT [04/07 11:22:44 graph]: Epoch 48: get test f1 score:  0.872
+[2023-04-07 11:22:44] PRINT [04/07 11:22:44 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:22:48] PRINT [04/07 11:22:48 graph]: Epoch 49 | train_loss: 0.0383 | lr: 0.000183
+[2023-04-07 11:23:41] PRINT [04/07 11:23:41 graph]: #Test_f1: 0.8720±0.0257
+[2023-04-07 11:23:41] PRINT [04/07 11:23:41 graph]: Epoch 49: get test f1 score:  0.872
+[2023-04-07 11:23:41] PRINT [04/07 11:23:41 graph]: best_f1 0.874 at epoch 37
+[2023-04-07 11:23:41] PRINT [04/07 11:23:41 graph]: # final_acc: 0.8745±0.0000

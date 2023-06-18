@@ -1,0 +1,45 @@
+DATA:
+    data_name: REDDIT-BINARY 
+    deg4feat: False
+
+DATALOADER:
+    NUM_WORKERS: 0
+    BATCH_SIZE: 32
+
+MODEL: 
+    num_hidden: 512
+    num_layers: 2
+    nhead: 8
+    activation: prelu
+    attn_drop: 0.2
+    feat_drop: 0.4
+    norm: batchnorm
+    pooler: mean
+    beta_schedule: quad
+    # beta_schedule: linear
+    beta_1: 0.0001
+    beta_T: 0.02
+    # T: 583
+    T: 1000
+
+SOLVER:
+    optim_type: adamw
+    optim_type_f: adamw
+    alpha: 1
+    decay: 20
+    LR: 0.00028194065392335313
+    # LR_f: 0.005
+    weight_decay: 0.0005
+    # weight_decay_f: 0.0005
+    MAX_EPOCH: 50
+    # max_epoch_f: 50
+
+DEVICE: cuda
+seeds:
+    - 11
+eval_T:
+    - 50
+    - 100
+    - 200
+
+eval_ratio: 0.2

@@ -1,0 +1,211 @@
+[2023-03-21 12:49:59] INFO (main) Start NNI manager
+[2023-03-21 12:49:59] INFO (NNIDataStore) Datastore initialization done
+[2023-03-21 12:49:59] INFO (RestServer) Starting REST server at port 6006, URL prefix: "/"
+[2023-03-21 12:49:59] INFO (RestServer) REST server started.
+[2023-03-21 12:50:00] INFO (NNIManager) Starting experiment: picyxa7m
+[2023-03-21 12:50:00] INFO (NNIManager) Setup training service...
+[2023-03-21 12:50:00] INFO (LocalTrainingService) Construct local machine training service.
+[2023-03-21 12:50:00] INFO (NNIManager) Setup tuner...
+[2023-03-21 12:50:00] INFO (NNIManager) Change NNIManager status from: INITIALIZED to: RUNNING
+[2023-03-21 12:50:00] INFO (NNIManager) Add event listeners
+[2023-03-21 12:50:00] INFO (LocalTrainingService) Run local machine training service.
+[2023-03-21 12:50:00] INFO (NNIManager) NNIManager received command from dispatcher: ID, 
+[2023-03-21 12:50:00] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 0, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.30000000000000004, "attn_drop": 0.1, "nhead": 4, "num_hidden": 1024, "LR": 9.006870447490446e-05, "LR_f": 0.007560572173167198, "weight_decay_f": 2.4417823749604302e-05, "alpha": 0.4, "alpha_l": 1, "decay": 30.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0001908906683251366, "beta_T": 0.0848386050031978, "T": 914.2723528083143}, "parameter_index": 0}
+[2023-03-21 12:50:05] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 0,
+  hyperParameters: {
+    value: '{"parameter_id": 0, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.30000000000000004, "attn_drop": 0.1, "nhead": 4, "num_hidden": 1024, "LR": 9.006870447490446e-05, "LR_f": 0.007560572173167198, "weight_decay_f": 2.4417823749604302e-05, "alpha": 0.4, "alpha_l": 1, "decay": 30.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0001908906683251366, "beta_T": 0.0848386050031978, "T": 914.2723528083143}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 12:50:15] INFO (NNIManager) Trial job BU5we status changed from WAITING to RUNNING
+[2023-03-21 12:52:25] INFO (NNIManager) Trial job BU5we status changed from RUNNING to SUCCEEDED
+[2023-03-21 12:52:25] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 1, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.1, "attn_drop": 0.30000000000000004, "nhead": 4, "num_hidden": 1024, "LR": 0.00019464001524958826, "LR_f": 0.00015766645144663777, "weight_decay_f": 1.6197258923655344e-06, "alpha": 0.4, "alpha_l": 2, "decay": 10.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0005153714492954778, "beta_T": 0.053864448473312995, "T": 719.992683717854}, "parameter_index": 0}
+[2023-03-21 12:52:30] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 1,
+  hyperParameters: {
+    value: '{"parameter_id": 1, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.1, "attn_drop": 0.30000000000000004, "nhead": 4, "num_hidden": 1024, "LR": 0.00019464001524958826, "LR_f": 0.00015766645144663777, "weight_decay_f": 1.6197258923655344e-06, "alpha": 0.4, "alpha_l": 2, "decay": 10.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0005153714492954778, "beta_T": 0.053864448473312995, "T": 719.992683717854}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 12:52:35] INFO (NNIManager) Trial job C5HTt status changed from WAITING to RUNNING
+[2023-03-21 12:54:56] INFO (NNIManager) Trial job C5HTt status changed from RUNNING to SUCCEEDED
+[2023-03-21 12:54:56] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 2, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.4, "nhead": 4, "num_hidden": 512, "LR": 5.084816567489325e-05, "LR_f": 0.03995593275359711, "weight_decay_f": 6.603978736278888e-05, "alpha": 0.8, "alpha_l": 2, "decay": 20.0, "norm": "layernorm", "beta_schedule": "const", "beta_1": 6.095766515803519e-05, "beta_T": 0.03059061700401993, "T": 228.69664071423995}, "parameter_index": 0}
+[2023-03-21 12:55:01] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 2,
+  hyperParameters: {
+    value: '{"parameter_id": 2, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.4, "nhead": 4, "num_hidden": 512, "LR": 5.084816567489325e-05, "LR_f": 0.03995593275359711, "weight_decay_f": 6.603978736278888e-05, "alpha": 0.8, "alpha_l": 2, "decay": 20.0, "norm": "layernorm", "beta_schedule": "const", "beta_1": 6.095766515803519e-05, "beta_T": 0.03059061700401993, "T": 228.69664071423995}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 12:55:06] INFO (NNIManager) Trial job bBtDy status changed from WAITING to RUNNING
+[2023-03-21 12:56:56] INFO (NNIManager) Trial job bBtDy status changed from RUNNING to SUCCEEDED
+[2023-03-21 12:56:56] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 3, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.1, "nhead": 4, "num_hidden": 1024, "LR": 0.00013221691482624066, "LR_f": 0.00048110013203427423, "weight_decay_f": 1.9419511191590165e-06, "alpha": 0.4, "alpha_l": 3, "decay": 50.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 0.0001345306768089533, "beta_T": 0.09935847812041453, "T": 528.7606093596963}, "parameter_index": 0}
+[2023-03-21 12:57:01] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 3,
+  hyperParameters: {
+    value: '{"parameter_id": 3, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.1, "nhead": 4, "num_hidden": 1024, "LR": 0.00013221691482624066, "LR_f": 0.00048110013203427423, "weight_decay_f": 1.9419511191590165e-06, "alpha": 0.4, "alpha_l": 3, "decay": 50.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 0.0001345306768089533, "beta_T": 0.09935847812041453, "T": 528.7606093596963}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 12:57:06] INFO (NNIManager) Trial job tYOrp status changed from WAITING to RUNNING
+[2023-03-21 12:59:26] INFO (NNIManager) Trial job tYOrp status changed from RUNNING to SUCCEEDED
+[2023-03-21 12:59:26] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 4, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.1, "attn_drop": 0.4, "nhead": 2, "num_hidden": 1024, "LR": 7.063651470487352e-05, "LR_f": 0.013569208430267802, "weight_decay_f": 0.00011563188055177472, "alpha": 0.8, "alpha_l": 2, "decay": 20.0, "norm": "batchnorm", "beta_schedule": "const", "beta_1": 0.0005233069053499648, "beta_T": 0.07510171576206635, "T": 211.30418691941193}, "parameter_index": 0}
+[2023-03-21 12:59:31] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 4,
+  hyperParameters: {
+    value: '{"parameter_id": 4, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.1, "attn_drop": 0.4, "nhead": 2, "num_hidden": 1024, "LR": 7.063651470487352e-05, "LR_f": 0.013569208430267802, "weight_decay_f": 0.00011563188055177472, "alpha": 0.8, "alpha_l": 2, "decay": 20.0, "norm": "batchnorm", "beta_schedule": "const", "beta_1": 0.0005233069053499648, "beta_T": 0.07510171576206635, "T": 211.30418691941193}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 12:59:36] INFO (NNIManager) Trial job LapeW status changed from WAITING to RUNNING
+[2023-03-21 13:02:11] INFO (NNIManager) Trial job LapeW status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:02:11] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 5, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.30000000000000004, "nhead": 2, "num_hidden": 512, "LR": 0.00010656538713757415, "LR_f": 0.00012331624267047478, "weight_decay_f": 7.493792961657524e-06, "alpha": 1, "alpha_l": 2, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "const", "beta_1": 0.0001470045743481976, "beta_T": 0.013059953930003955, "T": 330.65163457873547}, "parameter_index": 0}
+[2023-03-21 13:02:16] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 5,
+  hyperParameters: {
+    value: '{"parameter_id": 5, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.30000000000000004, "nhead": 2, "num_hidden": 512, "LR": 0.00010656538713757415, "LR_f": 0.00012331624267047478, "weight_decay_f": 7.493792961657524e-06, "alpha": 1, "alpha_l": 2, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "const", "beta_1": 0.0001470045743481976, "beta_T": 0.013059953930003955, "T": 330.65163457873547}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:02:21] INFO (NNIManager) Trial job tnPxB status changed from WAITING to RUNNING
+[2023-03-21 13:04:27] INFO (NNIManager) Trial job tnPxB status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:04:27] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 6, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.5, "attn_drop": 0.2, "nhead": 2, "num_hidden": 512, "LR": 0.0004340890384776429, "LR_f": 0.00011056041172115395, "weight_decay_f": 1.2496921638129572e-05, "alpha": 0.4, "alpha_l": 2, "decay": 20.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0006831936027208083, "beta_T": 0.010345549849504785, "T": 205.10675894636216}, "parameter_index": 0}
+[2023-03-21 13:04:32] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 6,
+  hyperParameters: {
+    value: '{"parameter_id": 6, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.5, "attn_drop": 0.2, "nhead": 2, "num_hidden": 512, "LR": 0.0004340890384776429, "LR_f": 0.00011056041172115395, "weight_decay_f": 1.2496921638129572e-05, "alpha": 0.4, "alpha_l": 2, "decay": 20.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0006831936027208083, "beta_T": 0.010345549849504785, "T": 205.10675894636216}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:04:37] INFO (NNIManager) Trial job r4PxA status changed from WAITING to RUNNING
+[2023-03-21 13:06:42] INFO (NNIManager) Trial job r4PxA status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:06:42] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 7, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.2, "nhead": 2, "num_hidden": 512, "LR": 5.62885839802871e-05, "LR_f": 0.000820957186314008, "weight_decay_f": 1.2717029859028668e-05, "alpha": 0.4, "alpha_l": 2, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "quad", "beta_1": 0.0002823441247525696, "beta_T": 0.05804231811402157, "T": 792.5596506043601}, "parameter_index": 0}
+[2023-03-21 13:06:47] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 7,
+  hyperParameters: {
+    value: '{"parameter_id": 7, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.2, "nhead": 2, "num_hidden": 512, "LR": 5.62885839802871e-05, "LR_f": 0.000820957186314008, "weight_decay_f": 1.2717029859028668e-05, "alpha": 0.4, "alpha_l": 2, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "quad", "beta_1": 0.0002823441247525696, "beta_T": 0.05804231811402157, "T": 792.5596506043601}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:06:52] INFO (NNIManager) Trial job xu9Vr status changed from WAITING to RUNNING
+[2023-03-21 13:08:42] INFO (NNIManager) Trial job xu9Vr status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:08:42] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 8, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.1, "attn_drop": 0.4, "nhead": 2, "num_hidden": 512, "LR": 0.00043153556284817, "LR_f": 0.0008803080845736766, "weight_decay_f": 4.821802853754774e-06, "alpha": 0.8, "alpha_l": 2, "decay": 10.0, "norm": "batchnorm", "beta_schedule": "quad", "beta_1": 0.0001638830220696445, "beta_T": 0.06774254912570014, "T": 758.6363989032027}, "parameter_index": 0}
+[2023-03-21 13:08:47] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 8,
+  hyperParameters: {
+    value: '{"parameter_id": 8, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.1, "attn_drop": 0.4, "nhead": 2, "num_hidden": 512, "LR": 0.00043153556284817, "LR_f": 0.0008803080845736766, "weight_decay_f": 4.821802853754774e-06, "alpha": 0.8, "alpha_l": 2, "decay": 10.0, "norm": "batchnorm", "beta_schedule": "quad", "beta_1": 0.0001638830220696445, "beta_T": 0.06774254912570014, "T": 758.6363989032027}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:08:52] INFO (NNIManager) Trial job aDWUw status changed from WAITING to RUNNING
+[2023-03-21 13:10:52] INFO (NNIManager) Trial job aDWUw status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:10:52] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 9, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.30000000000000004, "nhead": 2, "num_hidden": 1024, "LR": 8.312564336957038e-05, "LR_f": 0.009472311997390246, "weight_decay_f": 1.1188743946188472e-05, "alpha": 1, "alpha_l": 3, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 0.00021897594042214017, "beta_T": 0.04972856336057361, "T": 664.5619373584366}, "parameter_index": 0}
+[2023-03-21 13:10:57] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 9,
+  hyperParameters: {
+    value: '{"parameter_id": 9, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.30000000000000004, "nhead": 2, "num_hidden": 1024, "LR": 8.312564336957038e-05, "LR_f": 0.009472311997390246, "weight_decay_f": 1.1188743946188472e-05, "alpha": 1, "alpha_l": 3, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 0.00021897594042214017, "beta_T": 0.04972856336057361, "T": 664.5619373584366}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:11:02] INFO (NNIManager) Trial job a7Nww status changed from WAITING to RUNNING
+[2023-03-21 13:13:18] INFO (NNIManager) Trial job a7Nww status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:13:18] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 10, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.30000000000000004, "attn_drop": 0.1, "nhead": 2, "num_hidden": 1024, "LR": 7.583719323875169e-05, "LR_f": 0.000371661789089512, "weight_decay_f": 4.0616257977498966e-06, "alpha": 0.4, "alpha_l": 2, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "quad", "beta_1": 0.000270554545377025, "beta_T": 0.05033203786125804, "T": 973.8862839433743}, "parameter_index": 0}
+[2023-03-21 13:13:23] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 10,
+  hyperParameters: {
+    value: '{"parameter_id": 10, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.30000000000000004, "attn_drop": 0.1, "nhead": 2, "num_hidden": 1024, "LR": 7.583719323875169e-05, "LR_f": 0.000371661789089512, "weight_decay_f": 4.0616257977498966e-06, "alpha": 0.4, "alpha_l": 2, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "quad", "beta_1": 0.000270554545377025, "beta_T": 0.05033203786125804, "T": 973.8862839433743}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:13:28] INFO (NNIManager) Trial job dsnpR status changed from WAITING to RUNNING
+[2023-03-21 13:15:53] INFO (NNIManager) Trial job dsnpR status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:15:53] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 11, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.1, "nhead": 4, "num_hidden": 512, "LR": 0.0004518201200730757, "LR_f": 0.007653155165052692, "weight_decay_f": 1.8928203419747527e-05, "alpha": 1, "alpha_l": 1, "decay": 30.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0002933739166841316, "beta_T": 0.05309716784851668, "T": 685.486931222605}, "parameter_index": 0}
+[2023-03-21 13:15:58] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 11,
+  hyperParameters: {
+    value: '{"parameter_id": 11, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.4, "attn_drop": 0.1, "nhead": 4, "num_hidden": 512, "LR": 0.0004518201200730757, "LR_f": 0.007653155165052692, "weight_decay_f": 1.8928203419747527e-05, "alpha": 1, "alpha_l": 1, "decay": 30.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0002933739166841316, "beta_T": 0.05309716784851668, "T": 685.486931222605}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:16:03] INFO (NNIManager) Trial job kLuvX status changed from WAITING to RUNNING
+[2023-03-21 13:17:53] INFO (NNIManager) Trial job kLuvX status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:17:53] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 12, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.30000000000000004, "nhead": 2, "num_hidden": 512, "LR": 0.00044499257714176066, "LR_f": 0.026556903176142375, "weight_decay_f": 2.6624692261321656e-05, "alpha": 1, "alpha_l": 1, "decay": 30.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 0.0001993341446492497, "beta_T": 0.0474665704305295, "T": 673.1265965649648}, "parameter_index": 0}
+[2023-03-21 13:17:58] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 12,
+  hyperParameters: {
+    value: '{"parameter_id": 12, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.30000000000000004, "nhead": 2, "num_hidden": 512, "LR": 0.00044499257714176066, "LR_f": 0.026556903176142375, "weight_decay_f": 2.6624692261321656e-05, "alpha": 1, "alpha_l": 1, "decay": 30.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 0.0001993341446492497, "beta_T": 0.0474665704305295, "T": 673.1265965649648}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:18:03] INFO (NNIManager) Trial job saAOc status changed from WAITING to RUNNING
+[2023-03-21 13:19:48] INFO (NNIManager) Trial job saAOc status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:19:48] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 13, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.2, "nhead": 2, "num_hidden": 1024, "LR": 7.449759075144576e-05, "LR_f": 0.0002164431377376484, "weight_decay_f": 3.273752953635733e-05, "alpha": 1, "alpha_l": 1, "decay": 20.0, "norm": "batchnorm", "beta_schedule": "const", "beta_1": 0.0004300448785345296, "beta_T": 0.03928498102214521, "T": 734.1030045518135}, "parameter_index": 0}
+[2023-03-21 13:19:53] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 13,
+  hyperParameters: {
+    value: '{"parameter_id": 13, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.2, "nhead": 2, "num_hidden": 1024, "LR": 7.449759075144576e-05, "LR_f": 0.0002164431377376484, "weight_decay_f": 3.273752953635733e-05, "alpha": 1, "alpha_l": 1, "decay": 20.0, "norm": "batchnorm", "beta_schedule": "const", "beta_1": 0.0004300448785345296, "beta_T": 0.03928498102214521, "T": 734.1030045518135}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:19:58] INFO (NNIManager) Trial job Yupdv status changed from WAITING to RUNNING
+[2023-03-21 13:22:18] INFO (NNIManager) Trial job Yupdv status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:22:18] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 14, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.1, "nhead": 2, "num_hidden": 512, "LR": 0.0003199398344263185, "LR_f": 0.0014801557137421953, "weight_decay_f": 3.5961475809189024e-06, "alpha": 0.4, "alpha_l": 1, "decay": 50.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0003756479106015647, "beta_T": 0.09448924702762465, "T": 274.9691911026943}, "parameter_index": 0}
+[2023-03-21 13:22:23] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 14,
+  hyperParameters: {
+    value: '{"parameter_id": 14, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.1, "nhead": 2, "num_hidden": 512, "LR": 0.0003199398344263185, "LR_f": 0.0014801557137421953, "weight_decay_f": 3.5961475809189024e-06, "alpha": 0.4, "alpha_l": 1, "decay": 50.0, "norm": "layernorm", "beta_schedule": "linear", "beta_1": 0.0003756479106015647, "beta_T": 0.09448924702762465, "T": 274.9691911026943}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:22:28] INFO (NNIManager) Trial job bwsk9 status changed from WAITING to RUNNING
+[2023-03-21 13:24:19] INFO (NNIManager) Trial job bwsk9 status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:24:19] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 15, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.30000000000000004, "attn_drop": 0.30000000000000004, "nhead": 4, "num_hidden": 1024, "LR": 0.00016274544932744336, "LR_f": 0.0005546161572852055, "weight_decay_f": 4.362739147319343e-05, "alpha": 0.4, "alpha_l": 3, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 0.0008783179519110203, "beta_T": 0.009800621447929307, "T": 893.0938022155697}, "parameter_index": 0}
+[2023-03-21 13:24:24] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 15,
+  hyperParameters: {
+    value: '{"parameter_id": 15, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.30000000000000004, "attn_drop": 0.30000000000000004, "nhead": 4, "num_hidden": 1024, "LR": 0.00016274544932744336, "LR_f": 0.0005546161572852055, "weight_decay_f": 4.362739147319343e-05, "alpha": 0.4, "alpha_l": 3, "decay": 40.0, "norm": "batchnorm", "beta_schedule": "linear", "beta_1": 0.0008783179519110203, "beta_T": 0.009800621447929307, "T": 893.0938022155697}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:24:29] INFO (NNIManager) Trial job ORCCo status changed from WAITING to RUNNING
+[2023-03-21 13:26:49] INFO (NNIManager) Trial job ORCCo status changed from RUNNING to SUCCEEDED
+[2023-03-21 13:26:49] INFO (NNIManager) NNIManager received command from dispatcher: TR, {"parameter_id": 16, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.30000000000000004, "nhead": 4, "num_hidden": 512, "LR": 0.00045419634352044194, "LR_f": 0.006318764488525132, "weight_decay_f": 5.940171493015104e-06, "alpha": 0.4, "alpha_l": 2, "decay": 50.0, "norm": "layernorm", "beta_schedule": "quad", "beta_1": 0.0008846053660398925, "beta_T": 0.0814727727045642, "T": 525.6986678328548}, "parameter_index": 0}
+[2023-03-21 13:26:54] INFO (NNIManager) submitTrialJob: form: {
+  sequenceId: 16,
+  hyperParameters: {
+    value: '{"parameter_id": 16, "parameter_source": "algorithm", "parameters": {"feat_drop": 0.2, "attn_drop": 0.30000000000000004, "nhead": 4, "num_hidden": 512, "LR": 0.00045419634352044194, "LR_f": 0.006318764488525132, "weight_decay_f": 5.940171493015104e-06, "alpha": 0.4, "alpha_l": 2, "decay": 50.0, "norm": "layernorm", "beta_schedule": "quad", "beta_1": 0.0008846053660398925, "beta_T": 0.0814727727045642, "T": 525.6986678328548}, "parameter_index": 0}',
+    index: 0
+  },
+  placementConstraint: { type: 'None', gpus: [] }
+}
+[2023-03-21 13:26:59] INFO (NNIManager) Trial job WrnGH status changed from WAITING to RUNNING
+[2023-03-21 13:27:56] INFO (ShutdownManager) Initiate shutdown: REST request
+[2023-03-21 13:27:56] INFO (RestServer) Stopping REST server.
+[2023-03-21 13:27:56] INFO (NNIManager) Change NNIManager status from: RUNNING to: STOPPING
+[2023-03-21 13:27:56] INFO (NNIManager) Stopping experiment, cleaning up ...
+[2023-03-21 13:27:58] INFO (RestServer) REST server stopped.
+[2023-03-21 13:27:59] INFO (NNIManager) cancelTrialJob: WrnGH
+[2023-03-21 13:28:00] INFO (LocalTrainingService) Stopping local machine training service...
+[2023-03-21 13:28:00] INFO (NNIManager) Change NNIManager status from: STOPPING to: STOPPED
+[2023-03-21 13:28:00] INFO (NNIManager) Experiment stopped.
+[2023-03-21 13:28:00] INFO (NNITensorboardManager) Forced stopping all tensorboard task.
+[2023-03-21 13:28:00] INFO (NNITensorboardManager) All tensorboard task stopped.
+[2023-03-21 13:28:00] INFO (NNITensorboardManager) Tensorboard manager stopped.
+[2023-03-21 13:28:00] INFO (ShutdownManager) Shutdown complete.

@@ -1,0 +1,82 @@
+[2023-03-21 12:40:02] PRINT ---new cfg------
+[2023-03-21 12:40:02] PRINT {'DATA': {'data_name': 'pubmed'}, 'DATALOADER': {'NUM_WORKERS': 0}, 'MODEL': {'num_hidden': 1024, 'num_layers': 2, 'nhead': 4, 'activation': 'prelu', 'attn_drop': 0.2, 'feat_drop': 0.1, 'norm': 'batchnorm', 'pooler': 'mean', 'beta_schedule': 'sigmoid', 'beta_1': 0.0006256535480682259, 'beta_T': 0.04571711249590352, 'T': 166}, 'SOLVER': {'optim_type': 'adam', 'optim_type_f': 'adamw', 'alpha': 0.4, 'decay': 30, 'LR': 0.00025479362121814264, 'LR_f': 0.007715972300598115, 'weight_decay': 0, 'weight_decay_f': 6.7732075892569586e-06, 'MAX_EPOCH': 100, 'max_epoch_f': 100}, 'DEVICE': 'cuda', 'seeds': [0], 'eval_T': [50, 100, 200], 'output_dir': '/ddm-nni/PubMed/log', 'checkpoint_dir': '/ddm-nni/PubMed/log/checkpoint'}
+[2023-03-21 12:40:02] PRINT [03/21 12:40:02 graph]: Rank of current process: 0. World size: 1
+[2023-03-21 12:40:05] PRINT [03/21 12:40:05 graph]: Environment info:
+[2023-03-21 12:40:05] PRINT PyTorch version: 1.10.0+cu113
+[2023-03-21 12:40:05] PRINT Is debug build: False
+[2023-03-21 12:40:05] PRINT CUDA used to build PyTorch: 11.3
+[2023-03-21 12:40:05] PRINT ROCM used to build PyTorch: N/A
+[2023-03-21 12:40:05] PRINT 
+[2023-03-21 12:40:05] PRINT OS: Ubuntu 20.04.3 LTS (x86_64)
+[2023-03-21 12:40:05] PRINT GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+[2023-03-21 12:40:05] PRINT Clang version: Could not collect
+[2023-03-21 12:40:05] PRINT CMake version: version 3.16.3
+[2023-03-21 12:40:05] PRINT Libc version: glibc-2.31
+[2023-03-21 12:40:05] PRINT 
+[2023-03-21 12:40:05] PRINT Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+[2023-03-21 12:40:05] PRINT Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+[2023-03-21 12:40:05] PRINT Is CUDA available: True
+[2023-03-21 12:40:05] PRINT CUDA runtime version: 11.3.109
+[2023-03-21 12:40:05] PRINT GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+[2023-03-21 12:40:05] PRINT Nvidia driver version: 495.44
+[2023-03-21 12:40:05] PRINT cuDNN version: Probably one of the following:
+[2023-03-21 12:40:05] PRINT /usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+[2023-03-21 12:40:05] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+[2023-03-21 12:40:05] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+[2023-03-21 12:40:05] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+[2023-03-21 12:40:05] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+[2023-03-21 12:40:05] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+[2023-03-21 12:40:05] PRINT /usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+[2023-03-21 12:40:05] PRINT HIP runtime version: N/A
+[2023-03-21 12:40:05] PRINT MIOpen runtime version: N/A
+[2023-03-21 12:40:05] PRINT 
+[2023-03-21 12:40:05] PRINT Versions of relevant libraries:
+[2023-03-21 12:40:05] PRINT [pip3] numpy==1.23.5
+[2023-03-21 12:40:05] PRINT [pip3] torch==1.10.0+cu113
+[2023-03-21 12:40:05] PRINT [pip3] torchvision==0.11.1+cu113
+[2023-03-21 12:40:05] PRINT [conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 12:40:05] PRINT [conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 12:40:05] PRINT [conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 12:40:05] PRINT [conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 12:40:05] PRINT [conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 12:40:05] PRINT [conda] numpy                     1.21.4                   pypi_0    pypi
+[2023-03-21 12:40:05] PRINT [conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[2023-03-21 12:40:05] PRINT [conda] torch                     1.10.0+cu113             pypi_0    pypi
+[2023-03-21 12:40:05] PRINT [conda] torchvision               0.11.1+cu113             pypi_0    pypi
+[2023-03-21 12:40:05] PRINT         Pillow (8.4.0)
+[2023-03-21 12:40:05] PRINT [03/21 12:40:05 graph]: Command line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[2023-03-21 12:40:06] PRINT   NumNodes: 19717
+[2023-03-21 12:40:06] PRINT   NumEdges: 88651
+[2023-03-21 12:40:06] PRINT   NumFeats: 500
+[2023-03-21 12:40:06] PRINT   NumClasses: 3
+[2023-03-21 12:40:06] PRINT   NumTrainingSamples: 60
+[2023-03-21 12:40:06] PRINT   NumValidationSamples: 500
+[2023-03-21 12:40:06] PRINT   NumTestSamples: 1000
+[2023-03-21 12:40:06] PRINT Done loading data from cached files.
+[2023-03-21 12:40:06] PRINT [03/21 12:40:06 graph]: Run 0th for seed 0
+[2023-03-21 12:40:06] PRINT [03/21 12:40:06 graph]: Total trainable params num : 21363054
+[2023-03-21 12:40:10] PRINT [03/21 12:40:10 graph]: ----------Start Training----------
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: start epoch 0.
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: # Epoch 0: train_loss: 1.0002 | lr: 0.000255
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: start epoch 1.
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: # Epoch 1: train_loss: 0.8046 | lr: 0.000255
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: start epoch 2.
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: # Epoch 2: train_loss: 0.7389 | lr: 0.000255
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: start epoch 3.
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: # Epoch 3: train_loss: 0.6863 | lr: 0.000255
+[2023-03-21 12:40:11] PRINT [03/21 12:40:11 graph]: start epoch 4.
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: # Epoch 4: train_loss: 0.6454 | lr: 0.000255
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: start epoch 5.
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: # Epoch 5: train_loss: 0.6103 | lr: 0.000255
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: start epoch 6.
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: # Epoch 6: train_loss: 0.5817 | lr: 0.000255
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: start epoch 7.
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: # Epoch 7: train_loss: 0.5557 | lr: 0.000255
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: start epoch 8.
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: # Epoch 8: train_loss: 0.5354 | lr: 0.000255
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: start epoch 9.
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: # Epoch 9: train_loss: 0.5144 | lr: 0.000255
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: start epoch 10.
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: # Epoch 10: train_loss: 0.4981 | lr: 0.000255
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: start epoch 11.
+[2023-03-21 12:40:12] PRINT [03/21 12:40:12 graph]: # Epoch 11: train_loss: 0.4825 | lr: 0.000255

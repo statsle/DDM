@@ -1,0 +1,6 @@
+[2023-03-21 11:43:44] INFO (numexpr.utils/MainThread) Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+[2023-03-21 11:43:44] INFO (numexpr.utils/MainThread) Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2023-03-21 11:43:44] INFO (nni.tuner.tpe/MainThread) Using random seed 175843478
+[2023-03-21 11:43:44] INFO (nni.runtime.msg_dispatcher_base/MainThread) Dispatcher started
+[2023-03-21 12:49:44] INFO (nni.runtime.msg_dispatcher_base/MainThread) Dispatcher exiting...
+[2023-03-21 12:49:46] INFO (nni.runtime.msg_dispatcher_base/MainThread) Dispatcher terminiated

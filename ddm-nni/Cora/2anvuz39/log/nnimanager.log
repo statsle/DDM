@@ -1,0 +1,52 @@
+[2023-03-12 14:58:39] INFO (main) Start NNI manager
+[2023-03-12 14:58:39] INFO (NNIDataStore) Datastore initialization done
+[2023-03-12 14:58:39] INFO (RestServer) Starting REST server at port 6006, URL prefix: "/"
+[2023-03-12 14:58:39] INFO (RestServer) REST server started.
+[2023-03-12 14:58:40] INFO (NNIManager) Starting experiment: 2anvuz39
+[2023-03-12 14:58:40] INFO (NNIManager) Setup training service...
+[2023-03-12 14:58:40] INFO (LocalTrainingService) Construct local machine training service.
+[2023-03-12 14:58:40] INFO (NNIManager) Setup tuner...
+[2023-03-12 14:58:40] INFO (NNIManager) Change NNIManager status from: INITIALIZED to: RUNNING
+[2023-03-12 14:58:41] INFO (NNIManager) Add event listeners
+[2023-03-12 14:58:41] INFO (LocalTrainingService) Run local machine training service.
+[2023-03-12 14:59:07] INFO (ShutdownManager) Initiate shutdown: REST request
+[2023-03-12 14:59:07] INFO (RestServer) Stopping REST server.
+[2023-03-12 14:59:07] INFO (NNIManager) Change NNIManager status from: RUNNING to: STOPPING
+[2023-03-12 14:59:07] INFO (NNIManager) Stopping experiment, cleaning up ...
+[2023-03-12 14:59:08] INFO (LocalTrainingService) Stopping local machine training service...
+[2023-03-12 14:59:08] INFO (NNIManager) Change NNIManager status from: STOPPING to: STOPPED
+[2023-03-12 14:59:08] INFO (NNIManager) Experiment stopped.
+[2023-03-12 14:59:08] INFO (NNITensorboardManager) Forced stopping all tensorboard task.
+[2023-03-12 14:59:08] INFO (NNITensorboardManager) All tensorboard task stopped.
+[2023-03-12 14:59:08] INFO (NNITensorboardManager) Tensorboard manager stopped.
+[2023-03-12 14:59:09] ERROR (NNIRestHandler) Error: SQLITE_MISUSE: Database is closed
+    at Database.all (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/sqlite3/lib/sqlite3.js:19:27)
+    at SqlDB.queryMetricData (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/core/sqlDatabase.js:205:17)
+    at NNIDataStore.getMetricData (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/core/nniDataStore.js:147:24)
+    at NNIManager.getMetricData (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/core/nnimanager.js:340:31)
+    at /root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/rest_server/restHandler.js:250:29
+    at Layer.handle [as handle_request] (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/layer.js:95:5)
+    at /root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/index.js:281:22 {
+  errno: 21,
+  code: 'SQLITE_MISUSE'
+}
+[2023-03-12 14:59:09] ERROR (NNIRestHandler) Error: SQLITE_MISUSE: Database is closed
+    at Database.all (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/sqlite3/lib/sqlite3.js:19:27)
+    at SqlDB.queryTrialJobEvent (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/core/sqlDatabase.js:171:17)
+    at NNIDataStore.queryTrialJobs (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/core/nniDataStore.js:202:46)
+    at NNIDataStore.listTrialJobs (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/core/nniDataStore.js:119:21)
+    at NNIManager.listTrialJobs (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/core/nnimanager.js:378:31)
+    at /root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/rest_server/restHandler.js:210:29
+    at Layer.handle [as handle_request] (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/miniconda3/envs/nni/lib/python3.8/site-packages/nni_node/node_modules/express/lib/router/layer.js:95:5) {
+  errno: 21,
+  code: 'SQLITE_MISUSE'
+}
+[2023-03-12 14:59:11] INFO (LocalTrainingService) Local machine training service exit.
+[2023-03-12 14:59:14] INFO (RestServer) REST server stopped.
+[2023-03-12 14:59:14] INFO (ShutdownManager) Shutdown complete.

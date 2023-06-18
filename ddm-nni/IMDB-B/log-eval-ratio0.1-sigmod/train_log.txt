@@ -1,0 +1,106 @@
+[32m[04/13 19:18:23 graph]: [0mRank of current process: 0. World size: 1
+[32m[04/13 19:18:26 graph]: [0mEnvironment info:
+PyTorch version: 1.10.0+cu113
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.3 LTS (x86_64)
+GCC version: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.31
+
+Python version: 3.8.10 (default, Jun  4 2021, 15:09:15)  [GCC 7.5.0] (64-bit runtime)
+Python platform: Linux-5.4.0-90-generic-x86_64-with-glibc2.17
+Is CUDA available: True
+CUDA runtime version: 11.3.109
+GPU models and configuration: GPU 0: NVIDIA GeForce RTX 3090
+Nvidia driver version: 495.44
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip3] numpy==1.23.5
+[pip3] torch==1.10.0+cu113
+[pip3] torchvision==0.11.1+cu113
+[conda] blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl                       2021.4.0           h06a4308_640    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl-service               2.4.0            py38h7f8727e_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_fft                   1.3.1            py38hd3c417c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] mkl_random                1.2.2            py38h51133e4_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] numpy                     1.21.4                   pypi_0    pypi
+[conda] numpy-base                1.23.5           py38h31eccc5_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+[conda] torch                     1.10.0+cu113             pypi_0    pypi
+[conda] torchvision               0.11.1+cu113             pypi_0    pypi
+        Pillow (8.4.0)
+[32m[04/13 19:18:26 graph]: [0mCommand line arguments: Namespace(local_rank=0, resume=False, seed=1234, start_epoch=0)
+[32m[04/13 19:18:27 graph]: [0mRun 0th for seed 11
+[32m[04/13 19:18:27 graph]: [0mTotal trainable params num : 1873155
+[32m[04/13 19:18:32 graph]: [0m----------Start Training----------
+[32m[04/13 19:18:32 graph]: [0mEpoch 0 | train_loss: 0.8395 | lr: 0.000200
+[32m[04/13 19:18:32 graph]: [0mEpoch 1 | train_loss: 0.5394 | lr: 0.000200
+[32m[04/13 19:18:32 graph]: [0mEpoch 2 | train_loss: 0.3961 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 3 | train_loss: 0.3048 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 4 | train_loss: 0.2472 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 5 | train_loss: 0.2096 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 6 | train_loss: 0.1831 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 7 | train_loss: 0.1660 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 8 | train_loss: 0.1536 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 9 | train_loss: 0.1452 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 10 | train_loss: 0.1393 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 11 | train_loss: 0.1340 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 12 | train_loss: 0.1297 | lr: 0.000200
+[32m[04/13 19:18:33 graph]: [0mEpoch 13 | train_loss: 0.1255 | lr: 0.000200
+[32m[04/13 19:18:34 graph]: [0mEpoch 14 | train_loss: 0.1222 | lr: 0.000200
+[32m[04/13 19:18:34 graph]: [0mEpoch 15 | train_loss: 0.1202 | lr: 0.000200
+[32m[04/13 19:18:34 graph]: [0mEpoch 16 | train_loss: 0.1187 | lr: 0.000200
+[32m[04/13 19:18:34 graph]: [0mEpoch 17 | train_loss: 0.1160 | lr: 0.000200
+[32m[04/13 19:18:34 graph]: [0mEpoch 18 | train_loss: 0.1143 | lr: 0.000200
+[32m[04/13 19:18:34 graph]: [0mEpoch 19 | train_loss: 0.1130 | lr: 0.000200
+[32m[04/13 19:18:34 graph]: [0mEpoch 20 | train_loss: 0.1109 | lr: 0.000200
+[32m[04/13 19:18:34 graph]: [0mEpoch 21 | train_loss: 0.1098 | lr: 0.000200
+[32m[04/13 19:18:43 graph]: [0m#Test_f1: 0.7620±0.0504
+[32m[04/13 19:18:43 graph]: [0mEpoch 21: get test f1 score:  0.762
+[32m[04/13 19:18:43 graph]: [0mbest_f1 0.762 at epoch 21
+[32m[04/13 19:18:44 graph]: [0mEpoch 22 | train_loss: 0.1079 | lr: 0.000200
+[32m[04/13 19:18:53 graph]: [0m#Test_f1: 0.7580±0.0500
+[32m[04/13 19:18:53 graph]: [0mEpoch 22: get test f1 score:  0.758
+[32m[04/13 19:18:53 graph]: [0mbest_f1 0.762 at epoch 21
+[32m[04/13 19:18:53 graph]: [0mEpoch 23 | train_loss: 0.1070 | lr: 0.000200
+[32m[04/13 19:19:02 graph]: [0m#Test_f1: 0.7660±0.0544
+[32m[04/13 19:19:02 graph]: [0mEpoch 23: get test f1 score:  0.766
+[32m[04/13 19:19:02 graph]: [0mbest_f1 0.766 at epoch 23
+[32m[04/13 19:19:02 graph]: [0mEpoch 24 | train_loss: 0.1069 | lr: 0.000200
+[32m[04/13 19:19:12 graph]: [0m#Test_f1: 0.7610±0.0453
+[32m[04/13 19:19:12 graph]: [0mEpoch 24: get test f1 score:  0.761
+[32m[04/13 19:19:12 graph]: [0mbest_f1 0.766 at epoch 23
+[32m[04/13 19:19:12 graph]: [0mEpoch 25 | train_loss: 0.1044 | lr: 0.000200
+[32m[04/13 19:19:22 graph]: [0m#Test_f1: 0.7550±0.0537
+[32m[04/13 19:19:22 graph]: [0mEpoch 25: get test f1 score:  0.755
+[32m[04/13 19:19:22 graph]: [0mbest_f1 0.766 at epoch 23
+[32m[04/13 19:19:22 graph]: [0mEpoch 26 | train_loss: 0.1035 | lr: 0.000200
+[32m[04/13 19:19:31 graph]: [0m#Test_f1: 0.7550±0.0476
+[32m[04/13 19:19:31 graph]: [0mEpoch 26: get test f1 score:  0.755
+[32m[04/13 19:19:31 graph]: [0mbest_f1 0.766 at epoch 23
+[32m[04/13 19:19:31 graph]: [0mEpoch 27 | train_loss: 0.1034 | lr: 0.000200
+[32m[04/13 19:19:41 graph]: [0m#Test_f1: 0.7600±0.0518
+[32m[04/13 19:19:41 graph]: [0mEpoch 27: get test f1 score:  0.760
+[32m[04/13 19:19:41 graph]: [0mbest_f1 0.766 at epoch 23
+[32m[04/13 19:19:41 graph]: [0mEpoch 28 | train_loss: 0.1021 | lr: 0.000200
+[32m[04/13 19:19:50 graph]: [0m#Test_f1: 0.7540±0.0512
+[32m[04/13 19:19:50 graph]: [0mEpoch 28: get test f1 score:  0.754
+[32m[04/13 19:19:50 graph]: [0mbest_f1 0.766 at epoch 23
+[32m[04/13 19:19:51 graph]: [0mEpoch 29 | train_loss: 0.1012 | lr: 0.000200
+[32m[04/13 19:20:00 graph]: [0m#Test_f1: 0.7480±0.0389
+[32m[04/13 19:20:00 graph]: [0mEpoch 29: get test f1 score:  0.748
+[32m[04/13 19:20:00 graph]: [0mbest_f1 0.766 at epoch 23
+[32m[04/13 19:20:00 graph]: [0mEpoch 30 | train_loss: 0.1012 | lr: 0.000200

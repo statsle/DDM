@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "main_graph.py", line 214, in <module>
+    f1 = main(cfg)
+  File "main_graph.py", line 162, in main
+    test_f1 = graph_classification_evaluation(model, cfg.eval_T, pooler, eval_loader,
+  File "/ddm-nni/IMDB-B/evaluator.py", line 51, in graph_classification_evaluation
+    out = model.embed(batch_g, feat, t)
+  File "/ddm-nni/IMDB-B/models/DDM.py", line 120, in embed
+    _, hidden = self.net(g, x_t=x_t, time_embed=time_embed)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/ddm-nni/IMDB-B/models/mlp_gat.py", line 65, in forward
+    h_t = self.mlp_in_t(x_t)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/ddm-nni/IMDB-B/models/mlp_gat.py", line 117, in forward
+    x = self.out_proj(x)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/root/miniconda3/envs/nni/lib/python3.8/site-packages/torch/nn/functional.py", line 1848, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+/pytorch/aten/src/ATen/native/cuda/ScatterGatherKernel.cu:111: operator(): block: [0,0,0], thread: [0,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
+/ddm-nni/IMDB-B/lpvgaydw/trials/GVCSb/run.sh: line 10: 774183 Aborted                 (core dumped) python main_graph.py
