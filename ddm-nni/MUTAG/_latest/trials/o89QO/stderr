@@ -1,2 +1,0 @@
-/pytorch/aten/src/ATen/native/cuda/ScatterGatherKernel.cu:111: operator(): block: [0,0,0], thread: [0,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "index out of bounds"` failed.
-/ddm-nni/MUTAG/s1x65ap4/trials/o89QO/run.sh: line 10: 600135 Aborted                 (core dumped) python main_graph.py
