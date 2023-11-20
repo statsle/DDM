@@ -43,7 +43,6 @@ from utils.misc import mkdir
 
 from evaluator import graph_classification_evaluation
 import yaml
-import nni
 from easydict import EasyDict as edict
 
 

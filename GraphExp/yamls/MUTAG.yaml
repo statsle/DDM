@@ -15,22 +15,19 @@ MODEL:
     feat_drop: 0.2
     norm: layernorm
     pooler: mean
-    beta_schedule: linear
-    beta_1: 0.0001
-    beta_T: 0.02
-    T: 1000
+    beta_schedule: sigmoid
+    beta_1: 0.000335
+    beta_T: 0.03379
+    T: 728
 
 SOLVER:
     optim_type: adamw
     optim_type_f: adamw
-    alpha: 0.8
-    decay: 35
-    LR: 0.00005
-    # LR_f: 0.005
+    alpha: 1
+    decay: 30
+    LR: 0.000292
     weight_decay: 0.0005
-    # weight_decay_f: 0.0005
-    MAX_EPOCH: 50
-    # max_epoch_f: 50
+    MAX_EPOCH: 100
 
 DEVICE: cuda
 seeds:
