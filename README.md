@@ -21,7 +21,7 @@ We introduce a novel class of models termed **directional diffusion models (DDM)
 - Amazon-Photo
 
 ## Framework
-![](framework.pdf)
+![framework](./framework.pdf)
 ## Usage
 ```shell
 conda create -n ddm python=3.8
@@ -35,10 +35,12 @@ cd to EXP path(```MUTAG``` for example)
 cd GraphExp
 python main_graph.py --yaml_dir ./yamls/MUTAG.yaml
 ```
-Hyperparameters are given in dataset_name.yamls in ```yamls``` 
+**In view of the sensitivity of diffusion method to hyperparameters, it is recommended to use hyperparameter search methods like NNI to achieve better results**
+
+
 ## Performance
 ### Directional noise v.s. white noise
-![](noise_com.pdf)
+![noise](./noise_com.pdf)
 ### Graph classification(F1-score)
 |     |IMDB-B|IMDB-M|COLLAB|REDDIT-B|PROTEINS|MUTAG|
 |:---:|:----:|:----:|:----:|:------:|:------:|:---:|
