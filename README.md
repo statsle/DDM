@@ -30,7 +30,7 @@ cd ddm-nni
 pip install -r requirements.txt
 ```
 
-cd your target dataset(```MUTAG``` for example)
+cd to EXP path(```MUTAG``` for example)
 ```shell
 cd GraphExp
 python main_graph.py --yaml_dir ./yamls/MUTAG.yaml
