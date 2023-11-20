@@ -91,11 +91,9 @@ def main(cfg):
 
     graph, (num_features, num_classes) = load_dataset(cfg.DATA.data_name)
 
-
     acc_list = []
     for i, seed in enumerate(cfg.seeds):
         best_acc = float('-inf')
-        best_estp_acc = float('-inf')
         best_acc_epoch = float('inf')
         logger.info(f'Run {i}th for seed {seed}')
         set_random_seed(seed)
@@ -121,11 +119,11 @@ def main(cfg):
                             .format(cfg.checkpoint_dir, checkpoint['epoch']))
 
         logger.info("----------Start Training----------")
-        
         graph = graph.to(cfg.DEVICE)
         feat = graph.ndata['feat']
         for epoch in range(start_epoch, cfg.SOLVER.MAX_EPOCH):
-            adjust_learning_rate(optimizer, epoch=epoch, alpha=cfg.SOLVER.alpha, decay=cfg.SOLVER.decay, lr=cfg.SOLVER.LR)
+            adjust_learning_rate(optimizer, epoch=epoch, alpha=cfg.SOLVER.alpha,
+                                 decay=cfg.SOLVER.decay, lr=cfg.SOLVER.LR)
             pretrain(model, graph, feat, optimizer, epoch, logger)
             # custom eval frequency
             if ((epoch + 1) % 1 == 0) & (epoch > 10):
@@ -142,7 +140,7 @@ def main(cfg):
                 logger.info(f"best_f1 {best_acc:.3f} at epoch {best_acc_epoch}")
                 save_checkpoint({'epoch': epoch + 1,
                                  'state_dict': model.state_dict(),
-                                 'best_f1': best_f1,
+                                 'best_acc': best_acc,
                                  'optimizer': optimizer.state_dict()},
                                 is_best, filename=cfg.checkpoint_dir)
         acc_list.append(best_acc)
@@ -168,19 +166,4 @@ if __name__ == "__main__":
 
     cfg.output_dir, cfg.checkpoint_dir = output_dir, checkpoint_dir
 
-    print(cfg)
     f1 = main(cfg)
-    nni.report_final_result(f1)
-
-
-
-
-
-
-
-
-
-
-
-
-
