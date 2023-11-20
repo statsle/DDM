@@ -21,7 +21,7 @@ We introduce a novel class of models termed **directional diffusion models (DDM)
 - Amazon-Photo
 
 ## Framework
-![](framework.pdf)
+![framework](./framework.pdf)
 ## Usage
 ```shell
 conda create -n ddm python=3.8
@@ -40,7 +40,7 @@ python main_graph.py --yaml_dir ./yamls/MUTAG.yaml
 
 ## Performance
 ### Directional noise v.s. white noise
-![](noise_com.pdf)
+![noise](./noise_com.pdf)
 ### Graph classification(F1-score)
 |     |IMDB-B|IMDB-M|COLLAB|REDDIT-B|PROTEINS|MUTAG|
 |:---:|:----:|:----:|:----:|:------:|:------:|:---:|
