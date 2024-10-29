@@ -1,0 +1,14 @@
+{
+    "feat_drop": 0.4,
+    "attn_drop": 0.4,
+    "nhead": 2,
+    "num_hidden": 128,
+    "LR": 0.00009091421925639108,
+    "alpha": 0.8,
+    "decay": 40,
+    "norm": "layernorm",
+    "beta_schedule": "sigmoid",
+    "beta_1": 0.0003539425420564767,
+    "beta_T": 0.04332511993329242,
+    "T": 278.6269855370546
+}
