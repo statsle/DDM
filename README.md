@@ -40,7 +40,7 @@ python main_graph.py --yaml_dir ./yamls/MUTAG.yaml
 
 ## Performance
 ### Directional noise v.s. white noise
-![noise](./noise_com.pdf)
+![noise](./noise_com.png)
 ### Graph classification(F1-score)
 |     |IMDB-B|IMDB-M|COLLAB|REDDIT-B|PROTEINS|MUTAG|
 |:---:|:----:|:----:|:----:|:------:|:------:|:---:|
