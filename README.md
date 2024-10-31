@@ -1,4 +1,4 @@
-# Directional diffusion models
+# Directional Diffusion Models
 ## [NeurIPS 2023](https://arxiv.org/abs/2306.13210)
 
 Run Yang<sup>1</sup>, Yuling Yang<sup>1</sup>, Fan Zhou<sup>1</sup>, Qiang Sun<sup>2</sup> <br>
@@ -21,7 +21,7 @@ We introduce a novel class of models termed **directional diffusion models (DDM)
 - Amazon-Photo
 
 ## Framework
-![framework](./framework.pdf)
+![framework](./framework.png)
 ## Usage
 ```shell
 conda create -n ddm python=3.8
@@ -40,7 +40,7 @@ python main_graph.py --yaml_dir ./yamls/MUTAG.yaml
 
 ## Performance
 ### Directional noise v.s. white noise
-![noise](./noise_com.pdf)
+![noise](./noise_com.png)
 ### Graph classification(F1-score)
 |     |IMDB-B|IMDB-M|COLLAB|REDDIT-B|PROTEINS|MUTAG|
 |:---:|:----:|:----:|:----:|:------:|:------:|:---:|
@@ -66,7 +66,7 @@ python main_graph.py --yaml_dir ./yamls/MUTAG.yaml
 |GraphMAE[8] | 84.2 ± 0.4 | 73.4 ± 0.4    | 81.1 ± 0.4  | 71.75 ± 0.17 | 88.63 ± 0.17         | 93.63 ± 0.22              |
 |**DDM** |**83.4±0.2**|**74.3±0.3**|**81.7±0.8**|71.29±0.18|**90.56±0.21**|**95.09±0.18**|
 
-## Citations
+## References
 
 [1]:Xu, K., Hu, W., Leskovec, J., and Jegelka, S. (2018). How powerful are graph neural networks?
 arXiv preprint arXiv:1810.00826.<br>
