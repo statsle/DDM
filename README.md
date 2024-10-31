@@ -21,7 +21,7 @@ We introduce a novel class of models termed **directional diffusion models (DDM)
 - Amazon-Photo
 
 ## Framework
-![framework](./framework.pdf)
+![framework](./framework.png)
 ## Usage
 ```shell
 conda create -n ddm python=3.8
